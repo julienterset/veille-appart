@@ -6,6 +6,7 @@ Liste des appartements à vendre qui correspondent à nos critères :
 - budget 500 000 € maximum
 - 3 pièces de 60 à 80 m²
 - terrasse ou balcon obligatoire
+- pas de neuf, pas de grande résidence
 
 Les annonces sont dans `annonces.json`. Une tâche planifiée Claude les met à jour toutes les heures de 7 h à 23 h et envoie une notification quand une nouvelle annonce correspond.
 

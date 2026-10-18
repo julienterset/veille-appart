@@ -4,7 +4,9 @@
   "≤ 500 000 €",
   "3 pièces",
   "60 à 80 m²",
-  "Terrasse ou balcon"
+  "Terrasse ou balcon",
+  "Pas de neuf",
+  "Pas de grande résidence"
  ],
  "derniere_verif": "2026-10-18T19:15:00+02:00",
  "frequence": "vérification toutes les heures, de 7 h à 23 h",
@@ -23,56 +25,6 @@
    ],
    "source": "Orpi",
    "url": "https://www.orpi.com/annonces-immobilieres-antibes-juan-les-pins/vente-appartement/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
-  },
-  {
-   "id": "antibes-prugnons-62",
-   "commune": "Antibes",
-   "quartier": "Les Prugnons",
-   "prix": 425000,
-   "prix_estime": false,
-   "surface": 62.5,
-   "exterieur": "Terrasse",
-   "titre": "Programme neuf, 1er étage",
-   "atouts": [
-    "Neuf"
-   ],
-   "source": "SeLoger",
-   "url": "https://www.seloger.com/immobilier/i/achat/immo-antibes-06/bien-appartement/commodite-terrasse/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
-  },
-  {
-   "id": "antibes-prugnons-64",
-   "commune": "Antibes",
-   "quartier": "Les Prugnons",
-   "prix": 419000,
-   "prix_estime": false,
-   "surface": 64.4,
-   "exterieur": "Terrasse",
-   "titre": "Programme neuf, 3e étage sur 4",
-   "atouts": [
-    "Neuf",
-    "Livraison mars 2027"
-   ],
-   "source": "SeLoger",
-   "url": "https://www.seloger.com/immobilier/i/achat/immo-antibes-06/bien-appartement/commodite-terrasse/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
-  },
-  {
-   "id": "antibes-prugnons-rdc-64",
-   "commune": "Antibes",
-   "quartier": "Les Prugnons",
-   "prix": 437000,
-   "prix_estime": false,
-   "surface": 63.9,
-   "exterieur": "Terrasse",
-   "titre": "Programme neuf, rez-de-chaussée",
-   "atouts": [
-    "Neuf",
-    "Livraison oct. 2028"
-   ],
-   "source": "SeLoger",
-   "url": "https://www.seloger.com/immobilier/i/achat/immo-antibes-06/bien-appartement/commodite-terrasse/",
    "ajoutee_le": "2026-10-18T19:15:00+02:00"
   },
   {
@@ -184,24 +136,11 @@
    "exterieur": "Terrasse 8,5 m² sud",
    "titre": "Rez-de-chaussée, résidence 2024, 5 min de la mer",
    "atouts": [
-    "Clim"
+    "Clim",
+    "Petite copropriété (24 lots)"
    ],
    "source": "Square Habitat",
    "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
-  },
-  {
-   "id": "gj-neuf-63",
-   "commune": "Vallauris",
-   "quartier": "Golfe-Juan",
-   "prix": 388000,
-   "prix_estime": false,
-   "surface": 63.07,
-   "exterieur": "Terrasse",
-   "titre": "Résidence neuve sécurisée, 1er étage, est/sud",
-   "atouts": [],
-   "source": "Century 21",
-   "url": "https://www.century21.fr/annonces/achat-appartement/v-le+golfe+juan/",
    "ajoutee_le": "2026-10-18T19:15:00+02:00"
   },
   {
@@ -342,22 +281,6 @@
    "atouts": [],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
-  },
-  {
-   "id": "bocca-brs-62",
-   "commune": "Cannes",
-   "quartier": "La Bocca",
-   "prix": 230000,
-   "prix_estime": false,
-   "surface": 62,
-   "exterieur": "Terrasse 7 m²",
-   "titre": "Résidence récente proche mer",
-   "atouts": [
-    "Bail réel solidaire"
-   ],
-   "source": "SeLoger",
-   "url": "https://www.seloger.com/recherche/achat/appartement/cannes-06400/la-bocca-06150/nbh2fr9708",
    "ajoutee_le": "2026-10-18T19:15:00+02:00"
   }
  ]
