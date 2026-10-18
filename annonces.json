@@ -1,6 +1,6 @@
 {
  "criteres": [
-  "Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca",
+  "Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)",
   "≤ 500 000 €",
   "3 pièces",
   "60 à 80 m²",
@@ -45,81 +45,6 @@
    "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
    "ajoutee_le": "2026-10-18T19:15:00+02:00",
    "lien_direct": true
-  },
-  {
-   "id": "vallauris-pertuades-61",
-   "commune": "Vallauris",
-   "quartier": "Les Pertuades",
-   "prix": 425000,
-   "prix_estime": false,
-   "surface": 61.54,
-   "exterieur": "Balcon + terrasse",
-   "titre": "Parfait état, rez-de-chaussée",
-   "atouts": [
-    "Clim"
-   ],
-   "source": "Orpi",
-   "url": "https://www.orpi.com/annonce-vente-appartement-t3-vallauris-06220-ac91c579-7d76-44e3-9a0b-5edf6a7d2619/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00",
-   "lien_direct": true
-  },
-  {
-   "id": "bocca-gourguettes-62",
-   "commune": "Cannes",
-   "quartier": "La Bocca, Gourguettes",
-   "prix": 328000,
-   "prix_estime": false,
-   "surface": 62.55,
-   "exterieur": "Terrasse 10 m² + balcon",
-   "titre": "Meublé, DPE C",
-   "atouts": [
-    "Box fermé",
-    "Ascenseur"
-   ],
-   "source": "Century 21",
-   "url": "https://www.century21.fr/trouver_logement/detail/11976360074/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00",
-   "lien_direct": true
-  },
-  {
-   "id": "cannes-bocca-sud-65",
-   "commune": "Cannes",
-   "quartier": "La Bocca Sud",
-   "prix": 265000,
-   "prix_estime": false,
-   "surface": 65.23,
-   "exterieur": "Terrasse + balcon",
-   "titre": "Angle, terrasse vue, 2e étage",
-   "atouts": [
-    "Parking",
-    "Ascenseur",
-    "Petite copropriété",
-    "DPE C"
-   ],
-   "source": "Orpi",
-   "url": "https://www.orpi.com/annonce-vente-appartement-t3-cannes-06150-5994ecf5-7a92-4336-93c2-feef3bd61592/",
-   "lien_direct": true,
-   "ajoutee_le": "2026-10-18T19:56:00+02:00"
-  },
-  {
-   "id": "cannes-bocca-centre-71",
-   "commune": "Cannes",
-   "quartier": "La Bocca centre",
-   "prix": 315000,
-   "prix_estime": false,
-   "surface": 71,
-   "exterieur": "Terrasse + loggia",
-   "titre": "Traversant à rénover, grande terrasse",
-   "atouts": [
-    "Parking",
-    "Cave",
-    "Ascenseur",
-    "Traversant"
-   ],
-   "source": "French-Property (Estate Service)",
-   "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Addj7op48151ryzb",
-   "lien_direct": true,
-   "ajoutee_le": "2026-10-18T19:56:00+02:00"
   }
  ]
 }
