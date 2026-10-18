@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Veille T3 Antibes–Cannes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+/* Layout : en-tête « carnet de recherche » + liste de fiches annonces, une colonne sur mobile, deux sur grand écran */
+:root{
+  --bg:#f3f5f4; --surface:#ffffff; --ink:#15211f; --muted:#5d6b68; --line:#d9e0de;
+  --sea:#0e6a73; --sea-soft:#dbecee; --sun:#b7791f; --sun-soft:#f7ecd8; --off:#8a9491;
+  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1716; --surface:#16211f; --ink:#e4ecea; --muted:#9aaaa6; --line:#2a3836;
+  --sea:#5fc3cc; --sea-soft:#163a3d; --sun:#e6b25c; --sun-soft:#3a2e18; --off:#6e7b78; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1716; --surface:#16211f; --ink:#e4ecea; --muted:#9aaaa6; --line:#2a3836;
+  --sea:#5fc3cc; --sea-soft:#163a3d; --sun:#e6b25c; --sun-soft:#3a2e18; --off:#6e7b78; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{display:flex;flex-direction:column;gap:10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sea)}
+h1{font-family:var(--display);font-stretch:78%;font-weight:800;font-size:clamp(30px,6vw,46px);line-height:1;margin:0;text-wrap:balance}
+.crit{display:flex;flex-wrap:wrap;gap:6px}
+.crit span{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.status{font-size:13px;color:var(--muted)}
+.status b{color:var(--ink);font-weight:600}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:10px}
+.tabs{display:flex;flex-wrap:wrap;gap:4px}
+.tabs button{font:500 14px var(--body);color:var(--muted);background:none;border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.tabs .n{font-family:var(--mono);font-size:12px;margin-left:4px;opacity:.8}
+select{font:14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card.nouvelle{border-color:var(--sea);box-shadow:inset 0 0 0 1px var(--sea)}
+.card.ecartee{opacity:.55}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.where{font-weight:600;min-width:0}
+.where small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.price{font-family:var(--display);font-stretch:80%;font-weight:700;font-size:24px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.price .est{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--sun);display:block;text-align:right}
+.facts{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.facts b{color:var(--ink);font-weight:500}
+.desc{margin:0;font-size:14px;color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--sea-soft);color:var(--ink)}
+.tag.warn{background:var(--sun-soft)}
+.pill{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:5px}
+.pill.nouvelle{background:var(--sea);color:var(--bg)}
+.pill.suivi{background:var(--sun);color:var(--bg)}
+.pill.ecartee{background:var(--off);color:var(--bg)}
+.foot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;border-top:1px dashed var(--line);padding-top:10px}
+.meta{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.meta a{color:var(--sea);font-weight:500}
+.acts{display:flex;gap:6px}
+.acts button{font:500 13px var(--body);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
+.acts button:hover{border-color:var(--sea)}
+.empty{padding:32px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
+.note{font-size:12px;color:var(--muted);max-width:70ch}
+@media (prefers-reduced-motion:no-preference){.card{transition:opacity .2s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Veille immobilière · achat</div>
+    <h1>Un 3 pièces entre Antibes et Cannes</h1>
+    <div class="crit" id="crit"></div>
+    <div class="status" id="status">Chargement des annonces…</div>
+  </header>
+
+  <div class="bar">
+    <div class="tabs" role="group" aria-label="Filtrer par statut" id="tabs">
+      <button id="t-actives" data-f="actives" aria-pressed="true">À regarder<span class="n"></span></button>
+      <button id="t-nouvelle" data-f="nouvelle" aria-pressed="false">Nouvelles<span class="n"></span></button>
+      <button id="t-suivi" data-f="suivi" aria-pressed="false">À suivre<span class="n"></span></button>
+      <button id="t-ecartee" data-f="ecartee" aria-pressed="false">Écartées<span class="n"></span></button>
+    </div>
+    <label class="status">Trier
+      <select id="sort">
+        <option value="date">Plus récentes</option>
+        <option value="prix">Prix croissant</option>
+        <option value="m2">Prix au m² croissant</option>
+        <option value="surface">Surface décroissante</option>
+      </select>
+    </label>
+  </div>
+
+  <main class="list" id="list">
+    <div class="empty">Chargement des annonces…</div>
+  </main>
+
+  <p class="note">Les annonces sont repérées automatiquement sur les portails publics (SeLoger, Leboncoin, ParuVendu, réseaux d'agences). « Prix estimé » signifie que le prix a été recalculé à partir du prix au m² affiché. Vos choix « À suivre » et « Écarter » sont gardés dans ce navigateur uniquement. Vérifiez toujours l'annonce d'origine : elle peut avoir été vendue ou modifiée.</p>
+</div>
+<script>
+const DEFAULT_CRIT = ["Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca","≤ 500 000 €","3 pièces","60 à 80 m²","Terrasse ou balcon"];
+const LABEL = {nouvelle:"Nouvelle", suivi:"À suivre", ecartee:"Écartée"};
+let items = [], filter = "actives";
+try { const s = localStorage.getItem("veille-sort"); if (s) document.getElementById("sort").value = s; } catch(e) {}
+
+const fmt = n => n.toLocaleString("fr-FR");
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function renderCrit(list){
+  const c = document.getElementById("crit"); c.replaceChildren();
+  (list && list.length ? list : DEFAULT_CRIT).forEach(t => c.append(el("span", null, t)));
+}
+renderCrit();
+
+function render(){
+  const counts = {nouvelle:0, suivi:0, ecartee:0};
+  items.forEach(a => counts[a.statut] = (counts[a.statut]||0) + 1);
+  counts.actives = counts.nouvelle + counts.suivi;
+  document.querySelectorAll("#tabs button").forEach(b => {
+    b.setAttribute("aria-pressed", b.dataset.f === filter ? "true" : "false");
+    b.querySelector(".n").textContent = counts[b.dataset.f] || 0;
+  });
+  const sort = document.getElementById("sort").value;
+  let view = items.filter(a => filter === "actives" ? a.statut !== "ecartee" : a.statut === filter);
+  const m2 = a => a.prix && a.surface ? a.prix / a.surface : Infinity;
+  view.sort((a,b) => sort === "prix" ? (a.prix||1e12)-(b.prix||1e12)
+    : sort === "m2" ? m2(a)-m2(b)
+    : sort === "surface" ? (b.surface||0)-(a.surface||0)
+    : String(b.ajoutee_le||"").localeCompare(String(a.ajoutee_le||"")));
+
+  const list = document.getElementById("list"); list.replaceChildren();
+  if (!view.length){
+    list.append(el("div","empty", items.length ? "Aucune annonce dans cette catégorie." : "Aucune annonce pour l'instant. La veille ajoutera ici chaque bien qui correspond aux critères."));
+    return;
+  }
+  view.forEach(a => list.append(card(a)));
+}
+
+function card(a){
+  const c = el("article", "card " + a.statut);
+  const top = el("div","top");
+  const w = el("div","where", a.commune || "");
+  w.append(el("small", null, a.quartier || ""));
+  const p = el("div","price", a.prix ? fmt(a.prix) + " €" : "Prix n.c.");
+  if (a.prix_estime) p.append(el("span","est","prix estimé"));
+  top.append(w, p);
+
+  const f = el("div","facts");
+  const add = (label, val) => { const s = el("span", null, label + " "); s.append(el("b", null, val)); f.append(s); };
+  if (a.surface) add("Surface", fmt(a.surface) + " m²");
+  if (a.prix && a.surface) add("Prix/m²", fmt(Math.round(a.prix / a.surface)) + " €");
+  if (a.exterieur) add("Extérieur", a.exterieur);
+
+  c.append(top, f);
+  if (a.titre) c.append(el("p","desc", a.titre));
+  if (Array.isArray(a.atouts) && a.atouts.length){
+    const t = el("div","tags");
+    a.atouts.forEach(x => t.append(el("span", /^(neuf|bail|livraison)/i.test(x) ? "tag warn" : "tag", x)));
+    c.append(t);
+  }
+  const foot = el("div","foot");
+  const meta = el("div","meta");
+  meta.append(el("span","pill " + a.statut, LABEL[a.statut] || a.statut));
+  if (a.url){ const l = el("a", null, (a.source || "Voir") + " ↗"); l.href = a.url; l.target = "_blank"; l.rel = "noopener"; meta.append(l); }
+  if (a.ajoutee_le) meta.append(el("span", null, "repérée le " + new Date(a.ajoutee_le).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})));
+  const acts = el("div","acts");
+  const btn = (txt, st) => { const b = el("button", null, txt); b.type = "button"; b.onclick = () => setStatut(a, st); acts.append(b); };
+  if (a.statut !== "suivi") btn("À suivre", "suivi");
+  if (a.statut !== "ecartee") btn("Écarter", "ecartee");
+  if (a.statut === "ecartee") btn("Remettre", "suivi");
+  foot.append(meta, acts);
+  c.append(foot);
+  return c;
+}
+
+function loadStatuts(){ try { return JSON.parse(localStorage.getItem("veille-statuts")||"{}"); } catch(e){ return {}; } }
+function setStatut(a, statut){
+  const m = loadStatuts(); m[a.id] = statut;
+  try { localStorage.setItem("veille-statuts", JSON.stringify(m)); } catch(e) {}
+  a.statut = statut; render();
+}
+document.getElementById("tabs").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return; filter = b.dataset.f; render();
+});
+document.getElementById("sort").addEventListener("change", e => {
+  try { localStorage.setItem("veille-sort", e.target.value); } catch(_) {}
+  render();
+});
+
+(async () => {
+  const st = document.getElementById("status");
+  try {
+    const r = await fetch("annonces.json?t=" + Date.now(), {cache:"no-store"});
+    const d = await r.json();
+    const m = loadStatuts();
+    items = (d.annonces||[]).map(a => ({...a, statut: m[a.id] || "nouvelle"}));
+    if (d.criteres) renderCrit(d.criteres);
+    st.replaceChildren();
+    if (d.derniere_verif){
+      st.append("Dernière vérification ");
+      st.append(el("b", null, new Date(d.derniere_verif).toLocaleString("fr-FR",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})));
+      if (d.frequence) st.append(" · " + d.frequence);
+    }
+    render();
+  } catch(e){ st.textContent = "La liste n'a pas pu être chargée. Rechargez la page."; }
+})();
+</script>
+</body>
+</html>
