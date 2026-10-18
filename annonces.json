@@ -1,50 +1,71 @@
 {
- "criteres": [
-  "Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)",
-  "≤ 500 000 €",
-  "3 pièces",
-  "60 à 80 m²",
-  "Terrasse ou balcon",
-  "Pas de neuf",
-  "Pas de grande résidence"
- ],
- "derniere_verif": "2026-10-18T19:56:00+02:00",
- "frequence": "vérification toutes les heures, de 7 h à 23 h",
- "annonces": [
-  {
-   "id": "antibes-ponteil-72",
-   "commune": "Antibes",
-   "quartier": "Le Ponteil",
-   "prix": 485000,
-   "prix_estime": false,
-   "surface": 72.02,
-   "exterieur": "Balcon + terrasse",
-   "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
-   "atouts": [
-    "Cave"
-   ],
-   "source": "Orpi",
-   "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00",
-   "lien_direct": true
-  },
-  {
-   "id": "gj-residence-2024-79",
-   "commune": "Vallauris",
-   "quartier": "Golfe-Juan",
-   "prix": 374000,
-   "prix_estime": false,
-   "surface": 79,
-   "exterieur": "Terrasse 8,5 m² sud",
-   "titre": "Rez-de-chaussée, résidence 2024, 5 min de la mer",
-   "atouts": [
-    "Clim",
-    "Petite copropriété (24 lots)"
-   ],
-   "source": "Square Habitat",
-   "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00",
-   "lien_direct": true
-  }
- ]
+  "criteres": [
+    "Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)",
+    "≤ 500 000 €",
+    "3 pièces",
+    "60 à 80 m²",
+    "Terrasse ou balcon",
+    "Pas de neuf",
+    "Pas de grande résidence"
+  ],
+  "derniere_verif": "2026-10-18T21:00:00+02:00",
+  "frequence": "vérification toutes les heures, de 7 h à 23 h",
+  "annonces": [
+    {
+      "id": "antibes-ponteil-72",
+      "commune": "Antibes",
+      "quartier": "Le Ponteil",
+      "prix": 485000,
+      "prix_estime": false,
+      "surface": 72.02,
+      "exterieur": "Balcon + terrasse",
+      "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
+      "atouts": [
+        "Cave"
+      ],
+      "source": "Orpi",
+      "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
+      "ajoutee_le": "2026-10-18T19:15:00+02:00",
+      "lien_direct": true
+    },
+    {
+      "id": "gj-residence-2024-79",
+      "commune": "Vallauris",
+      "quartier": "Golfe-Juan",
+      "prix": 374000,
+      "prix_estime": false,
+      "surface": 79,
+      "exterieur": "Terrasse 8,5 m² sud",
+      "titre": "Rez-de-chaussée, résidence 2024, 5 min de la mer",
+      "atouts": [
+        "Clim",
+        "Petite copropriété (24 lots)"
+      ],
+      "source": "Square Habitat",
+      "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
+      "ajoutee_le": "2026-10-18T19:15:00+02:00",
+      "lien_direct": true
+    },
+    {
+      "id": "antibes-juan-les-pins-exflora-66",
+      "commune": "Antibes",
+      "quartier": "Juan-les-Pins (Exflora)",
+      "prix": 365000,
+      "prix_estime": false,
+      "surface": 66.23,
+      "exterieur": "Terrasse 16 m² plein sud",
+      "titre": "T3 avec terrasse sud près du parc Exflora",
+      "atouts": [
+        "Parking",
+        "Cave",
+        "Petite copropriété",
+        "Climatisation",
+        "Plages à 5 min"
+      ],
+      "source": "Orpi",
+      "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06160-f9603d3c-301d-4f3d-a071-db87f87c92e9/",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-18T21:00:00+02:00"
+    }
+  ]
 }
