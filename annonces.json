@@ -1,344 +1,125 @@
 {
-  "criteres": [
-    "Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca",
-    "≤ 500 000 €",
-    "3 pièces",
-    "60 à 80 m²",
-    "Terrasse ou balcon",
-    "Pas de neuf",
-    "Pas de grande résidence"
-  ],
-  "derniere_verif": "2026-10-18T19:56:00+02:00",
-  "frequence": "vérification toutes les heures, de 7 h à 23 h",
-  "annonces": [
-    {
-      "id": "antibes-ponteil-72",
-      "commune": "Antibes",
-      "quartier": "Le Ponteil",
-      "prix": 485000,
-      "prix_estime": false,
-      "surface": 72.02,
-      "exterieur": "Balcon + terrasse",
-      "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
-      "atouts": [
-        "Cave"
-      ],
-      "source": "Orpi",
-      "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": true
-    },
-    {
-      "id": "antibes-traversant-vuemer-61",
-      "commune": "Antibes",
-      "quartier": "",
-      "prix": 359000,
-      "prix_estime": false,
-      "surface": 61,
-      "exterieur": "Terrasse",
-      "titre": "3 pièces traversant, résidence calme",
-      "atouts": [
-        "Vue mer",
-        "Parking",
-        "Cave"
-      ],
-      "source": "Le Coin Immo",
-      "url": "https://www.le-coin-immo.fr/vente-appartement-3p-pieces.html",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "antibes-combes-65",
-      "commune": "Antibes",
-      "quartier": "Les Combes",
-      "prix": 280000,
-      "prix_estime": false,
-      "surface": 65,
-      "exterieur": "Terrasse",
-      "titre": "Retour à la vente, en exclusivité",
-      "atouts": [
-        "2 parkings"
-      ],
-      "source": "Le Coin Immo",
-      "url": "https://www.le-coin-immo.fr/vente-appartement-3p-pieces.html",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "juan-67-terrasse-parking",
-      "commune": "Antibes",
-      "quartier": "Juan-les-Pins",
-      "prix": 359000,
-      "prix_estime": true,
-      "surface": 67,
-      "exterieur": "Terrasse",
-      "titre": "DPE D",
-      "atouts": [
-        "Parking"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "juan-70-terrasse-parking",
-      "commune": "Antibes",
-      "quartier": "Juan-les-Pins",
-      "prix": 435000,
-      "prix_estime": true,
-      "surface": 70,
-      "exterieur": "Terrasse",
-      "titre": "DPE B",
-      "atouts": [
-        "Parking"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "juan-67-balcon",
-      "commune": "Antibes",
-      "quartier": "Juan-les-Pins",
-      "prix": 280000,
-      "prix_estime": true,
-      "surface": 67,
-      "exterieur": "Balcon",
-      "titre": "Baisse de prix",
-      "atouts": [
-        "Cave"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "gj-centre-80",
-      "commune": "Vallauris",
-      "quartier": "Golfe-Juan, vieux port",
-      "prix": 404000,
-      "prix_estime": false,
-      "surface": 80,
-      "exterieur": "Terrasse",
-      "titre": "Traversant exposé sud, immeuble de standing",
-      "atouts": [
-        "Ascenseur",
-        "Parking"
-      ],
-      "source": "Les Clefs de chez moi",
-      "url": "https://www.lesclefsdechezmoi.fr/achat-immobilier/alpes-maritimes/vallauris/golfe-juan-vieux-port/appartements/3-pieces.html",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "gj-residence-2024-79",
-      "commune": "Vallauris",
-      "quartier": "Golfe-Juan",
-      "prix": 374000,
-      "prix_estime": false,
-      "surface": 79,
-      "exterieur": "Terrasse 8,5 m² sud",
-      "titre": "Rez-de-chaussée, résidence 2024, 5 min de la mer",
-      "atouts": [
-        "Clim",
-        "Petite copropriété (24 lots)"
-      ],
-      "source": "Square Habitat",
-      "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": true
-    },
-    {
-      "id": "gj-pap-dernier-64",
-      "commune": "Vallauris",
-      "quartier": "Golfe-Juan",
-      "prix": 359000,
-      "prix_estime": false,
-      "surface": 64,
-      "exterieur": "Terrasse fermée + balcon",
-      "titre": "Rénové, traversant, dernier étage sud",
-      "atouts": [
-        "Particulier"
-      ],
-      "source": "PAP",
-      "url": "https://www.pap.fr/annonce/vente-appartements-vallauris-06220-g8765",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "gj-dernier-68",
-      "commune": "Vallauris",
-      "quartier": "Golfe-Juan",
-      "prix": 469000,
-      "prix_estime": true,
-      "surface": 68,
-      "exterieur": "Terrasse",
-      "titre": "Dernier étage, baisse de prix",
-      "atouts": [],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_vallauris_06220/real_estate_type:2",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "vallauris-pertuades-61",
-      "commune": "Vallauris",
-      "quartier": "Les Pertuades",
-      "prix": 425000,
-      "prix_estime": false,
-      "surface": 61.54,
-      "exterieur": "Balcon + terrasse",
-      "titre": "Parfait état, rez-de-chaussée",
-      "atouts": [
-        "Clim"
-      ],
-      "source": "Orpi",
-      "url": "https://www.orpi.com/annonce-vente-appartement-t3-vallauris-06220-ac91c579-7d76-44e3-9a0b-5edf6a7d2619/",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": true
-    },
-    {
-      "id": "vallauris-centre-70",
-      "commune": "Vallauris",
-      "quartier": "Centre-ville",
-      "prix": 262000,
-      "prix_estime": true,
-      "surface": 70,
-      "exterieur": "Terrasse",
-      "titre": "2e étage sur 5",
-      "atouts": [
-        "Parking",
-        "Cave"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_vallauris_06220/real_estate_type:2",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "bocca-gourguettes-62",
-      "commune": "Cannes",
-      "quartier": "La Bocca, Gourguettes",
-      "prix": 328000,
-      "prix_estime": false,
-      "surface": 62.55,
-      "exterieur": "Terrasse 10 m² + balcon",
-      "titre": "Meublé, DPE C",
-      "atouts": [
-        "Box fermé",
-        "Ascenseur"
-      ],
-      "source": "Century 21",
-      "url": "https://www.century21.fr/trouver_logement/detail/11976360074/",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": true
-    },
-    {
-      "id": "bocca-62-parking",
-      "commune": "Cannes",
-      "quartier": "La Bocca",
-      "prix": 240000,
-      "prix_estime": true,
-      "surface": 62,
-      "exterieur": "Terrasse",
-      "titre": "DPE A",
-      "atouts": [
-        "Parking"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "bocca-61",
-      "commune": "Cannes",
-      "quartier": "La Bocca",
-      "prix": 275000,
-      "prix_estime": true,
-      "surface": 61,
-      "exterieur": "Terrasse",
-      "titre": "DPE B, baisse de prix",
-      "atouts": [],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "bocca-nord-67",
-      "commune": "Cannes",
-      "quartier": "Bocca Nord, Ranguin",
-      "prix": 237000,
-      "prix_estime": false,
-      "surface": 67,
-      "exterieur": "Terrasse",
-      "titre": "DPE C",
-      "atouts": [
-        "Cave"
-      ],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "bocca-nord-75",
-      "commune": "Cannes",
-      "quartier": "Bocca Nord",
-      "prix": 270000,
-      "prix_estime": false,
-      "surface": 75,
-      "exterieur": "Terrasse",
-      "titre": "DPE C, baisse de prix",
-      "atouts": [],
-      "source": "Leboncoin",
-      "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": false
-    },
-    {
-      "id": "cannes-bocca-sud-65",
-      "commune": "Cannes",
-      "quartier": "La Bocca Sud",
-      "prix": 265000,
-      "prix_estime": false,
-      "surface": 65.23,
-      "exterieur": "Terrasse + balcon",
-      "titre": "Angle, terrasse vue, 2e étage",
-      "atouts": [
-        "Parking",
-        "Ascenseur",
-        "Petite copropriété",
-        "DPE C"
-      ],
-      "source": "Orpi",
-      "url": "https://www.orpi.com/annonce-vente-appartement-t3-cannes-06150-5994ecf5-7a92-4336-93c2-feef3bd61592/",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-18T19:56:00+02:00"
-    },
-    {
-      "id": "cannes-bocca-centre-71",
-      "commune": "Cannes",
-      "quartier": "La Bocca centre",
-      "prix": 315000,
-      "prix_estime": false,
-      "surface": 71,
-      "exterieur": "Terrasse + loggia",
-      "titre": "Traversant à rénover, grande terrasse",
-      "atouts": [
-        "Parking",
-        "Cave",
-        "Ascenseur",
-        "Traversant"
-      ],
-      "source": "French-Property (Estate Service)",
-      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Addj7op48151ryzb",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-18T19:56:00+02:00"
-    }
-  ]
+ "criteres": [
+  "Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca",
+  "≤ 500 000 €",
+  "3 pièces",
+  "60 à 80 m²",
+  "Terrasse ou balcon",
+  "Pas de neuf",
+  "Pas de grande résidence"
+ ],
+ "derniere_verif": "2026-10-18T19:56:00+02:00",
+ "frequence": "vérification toutes les heures, de 7 h à 23 h",
+ "annonces": [
+  {
+   "id": "antibes-ponteil-72",
+   "commune": "Antibes",
+   "quartier": "Le Ponteil",
+   "prix": 485000,
+   "prix_estime": false,
+   "surface": 72.02,
+   "exterieur": "Balcon + terrasse",
+   "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
+   "atouts": [
+    "Cave"
+   ],
+   "source": "Orpi",
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
+  },
+  {
+   "id": "gj-residence-2024-79",
+   "commune": "Vallauris",
+   "quartier": "Golfe-Juan",
+   "prix": 374000,
+   "prix_estime": false,
+   "surface": 79,
+   "exterieur": "Terrasse 8,5 m² sud",
+   "titre": "Rez-de-chaussée, résidence 2024, 5 min de la mer",
+   "atouts": [
+    "Clim",
+    "Petite copropriété (24 lots)"
+   ],
+   "source": "Square Habitat",
+   "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
+  },
+  {
+   "id": "vallauris-pertuades-61",
+   "commune": "Vallauris",
+   "quartier": "Les Pertuades",
+   "prix": 425000,
+   "prix_estime": false,
+   "surface": 61.54,
+   "exterieur": "Balcon + terrasse",
+   "titre": "Parfait état, rez-de-chaussée",
+   "atouts": [
+    "Clim"
+   ],
+   "source": "Orpi",
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-vallauris-06220-ac91c579-7d76-44e3-9a0b-5edf6a7d2619/",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
+  },
+  {
+   "id": "bocca-gourguettes-62",
+   "commune": "Cannes",
+   "quartier": "La Bocca, Gourguettes",
+   "prix": 328000,
+   "prix_estime": false,
+   "surface": 62.55,
+   "exterieur": "Terrasse 10 m² + balcon",
+   "titre": "Meublé, DPE C",
+   "atouts": [
+    "Box fermé",
+    "Ascenseur"
+   ],
+   "source": "Century 21",
+   "url": "https://www.century21.fr/trouver_logement/detail/11976360074/",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
+  },
+  {
+   "id": "cannes-bocca-sud-65",
+   "commune": "Cannes",
+   "quartier": "La Bocca Sud",
+   "prix": 265000,
+   "prix_estime": false,
+   "surface": 65.23,
+   "exterieur": "Terrasse + balcon",
+   "titre": "Angle, terrasse vue, 2e étage",
+   "atouts": [
+    "Parking",
+    "Ascenseur",
+    "Petite copropriété",
+    "DPE C"
+   ],
+   "source": "Orpi",
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-cannes-06150-5994ecf5-7a92-4336-93c2-feef3bd61592/",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-18T19:56:00+02:00"
+  },
+  {
+   "id": "cannes-bocca-centre-71",
+   "commune": "Cannes",
+   "quartier": "La Bocca centre",
+   "prix": 315000,
+   "prix_estime": false,
+   "surface": 71,
+   "exterieur": "Terrasse + loggia",
+   "titre": "Traversant à rénover, grande terrasse",
+   "atouts": [
+    "Parking",
+    "Cave",
+    "Ascenseur",
+    "Traversant"
+   ],
+   "source": "French-Property (Estate Service)",
+   "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Addj7op48151ryzb",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-18T19:56:00+02:00"
+  }
+ ]
 }
