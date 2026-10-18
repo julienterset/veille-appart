@@ -8,7 +8,7 @@
     "Pas de neuf",
     "Pas de grande résidence"
   ],
-  "derniere_verif": "2026-10-18T21:00:00+02:00",
+  "derniere_verif": "2026-10-18T21:58:22+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -66,6 +66,47 @@
       "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06160-f9603d3c-301d-4f3d-a071-db87f87c92e9/",
       "lien_direct": true,
       "ajoutee_le": "2026-10-18T21:00:00+02:00"
+    },
+    {
+      "id": "cannes-carnot-70",
+      "commune": "Cannes",
+      "quartier": "Carnot",
+      "prix": 435000,
+      "prix_estime": false,
+      "surface": 70,
+      "exterieur": "Terrasse couverte ~7 m²",
+      "titre": "3 pièces rénové avec terrasse, quartier Carnot",
+      "atouts": [
+        "Rénové",
+        "Cave",
+        "Ascenseur",
+        "Petite copropriété",
+        "Garage en option (30 000 €)"
+      ],
+      "source": "French Property",
+      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aesceyasxqf0a3ig",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-18T21:58:22+02:00"
+    },
+    {
+      "id": "cannes-croix-des-gardes-65",
+      "commune": "Cannes",
+      "quartier": "Croix des Gardes (bd du Périer)",
+      "prix": 295000,
+      "prix_estime": false,
+      "surface": 65,
+      "exterieur": "2 balcons (9,65 m² et 9,50 m²)",
+      "titre": "3 pièces avec deux balcons près de la Croix des Gardes",
+      "atouts": [
+        "Ascenseur",
+        "Petit immeuble (3 étages)",
+        "Sans travaux",
+        "Particulier (PAP)"
+      ],
+      "source": "PAP",
+      "url": "https://www.pap.fr/annonces/appartement-cannes-06400-r462202852",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-18T21:58:22+02:00"
     }
   ]
 }
