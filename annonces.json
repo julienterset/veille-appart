@@ -19,13 +19,14 @@
    "prix_estime": false,
    "surface": 72.02,
    "exterieur": "Balcon + terrasse",
-   "titre": "3 pièces, 2 chambres, cave",
+   "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
    "atouts": [
     "Cave"
    ],
    "source": "Orpi",
-   "url": "https://www.orpi.com/annonces-immobilieres-antibes-juan-les-pins/vente-appartement/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
   },
   {
    "id": "antibes-traversant-vuemer-61",
@@ -43,7 +44,8 @@
    ],
    "source": "Le Coin Immo",
    "url": "https://www.le-coin-immo.fr/vente-appartement-3p-pieces.html",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "antibes-combes-65",
@@ -59,7 +61,8 @@
    ],
    "source": "Le Coin Immo",
    "url": "https://www.le-coin-immo.fr/vente-appartement-3p-pieces.html",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "juan-67-terrasse-parking",
@@ -75,7 +78,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "juan-70-terrasse-parking",
@@ -91,7 +95,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "juan-67-balcon",
@@ -107,7 +112,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_juan-les-pins_06160",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "gj-centre-80",
@@ -124,7 +130,8 @@
    ],
    "source": "Les Clefs de chez moi",
    "url": "https://www.lesclefsdechezmoi.fr/achat-immobilier/alpes-maritimes/vallauris/golfe-juan-vieux-port/appartements/3-pieces.html",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "gj-residence-2024-79",
@@ -141,7 +148,8 @@
    ],
    "source": "Square Habitat",
    "url": "https://www.squarehabitat.fr/square-habitat-provence-cote-d-azur/annonces/biens/achat-ancien/appartement/le-golfe-juan/da80ec58-2570-47a1-b2ed-f0b9eb89023f",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
   },
   {
    "id": "gj-pap-dernier-64",
@@ -157,7 +165,8 @@
    ],
    "source": "PAP",
    "url": "https://www.pap.fr/annonce/vente-appartements-vallauris-06220-g8765",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "gj-dernier-68",
@@ -171,7 +180,8 @@
    "atouts": [],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_vallauris_06220/real_estate_type:2",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "vallauris-pertuades-61",
@@ -187,7 +197,8 @@
    ],
    "source": "Orpi",
    "url": "https://www.orpi.com/annonces-immobilieres-vallauris-golfe-juan/vente-appartement/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "vallauris-centre-70",
@@ -204,7 +215,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/cl/ventes_immobilieres/cp_vallauris_06220/real_estate_type:2",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "bocca-gourguettes-62",
@@ -221,7 +233,8 @@
    ],
    "source": "Century 21",
    "url": "https://www.century21.fr/trouver_logement/detail/11976360074/",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true
   },
   {
    "id": "bocca-62-parking",
@@ -237,7 +250,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "bocca-61",
@@ -251,7 +265,8 @@
    "atouts": [],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "bocca-nord-67",
@@ -267,7 +282,8 @@
    ],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   },
   {
    "id": "bocca-nord-75",
@@ -281,7 +297,8 @@
    "atouts": [],
    "source": "Leboncoin",
    "url": "https://www.leboncoin.fr/ck/ventes_immobilieres/t3-cannes",
-   "ajoutee_le": "2026-10-18T19:15:00+02:00"
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": false
   }
  ]
 }

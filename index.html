@@ -103,7 +103,7 @@ button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(
     <div class="empty">Chargement des annonces…</div>
   </main>
 
-  <p class="note">Les annonces sont repérées automatiquement sur les portails publics (SeLoger, Leboncoin, ParuVendu, réseaux d'agences). « Prix estimé » signifie que le prix a été recalculé à partir du prix au m² affiché. Vos choix « À suivre » et « Écarter » sont gardés dans ce navigateur uniquement. Vérifiez toujours l'annonce d'origine : elle peut avoir été vendue ou modifiée.</p>
+  <p class="note">Les annonces sont repérées automatiquement sur les portails publics (SeLoger, Leboncoin, ParuVendu, réseaux d'agences). « Annonce » ouvre l'annonce elle-même ; « Liste » ouvre la page de résultats où le bien a été repéré, à retrouver avec la surface et le prix. « Prix estimé » signifie que le prix a été recalculé à partir du prix au m² affiché. Vos choix « À suivre » et « Écarter » sont gardés dans ce navigateur uniquement. Vérifiez toujours l'annonce d'origine : elle peut avoir été vendue ou modifiée.</p>
 </div>
 <script>
 const DEFAULT_CRIT = ["Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca","≤ 500 000 €","3 pièces","60 à 80 m²","Terrasse ou balcon"];
@@ -169,7 +169,7 @@ function card(a){
   const foot = el("div","foot");
   const meta = el("div","meta");
   meta.append(el("span","pill " + a.statut, LABEL[a.statut] || a.statut));
-  if (a.url){ const l = el("a", null, (a.source || "Voir") + " ↗"); l.href = a.url; l.target = "_blank"; l.rel = "noopener"; meta.append(l); }
+  if (a.url){ const l = el("a", null, (a.lien_direct === false ? "Liste " : "Annonce ") + (a.source || "") + " ↗"); l.href = a.url; l.target = "_blank"; l.rel = "noopener"; if (a.lien_direct === false) l.title = "Lien vers la page de résultats où l'annonce a été repérée"; meta.append(l); }
   if (a.ajoutee_le) meta.append(el("span", null, "repérée le " + new Date(a.ajoutee_le).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})));
   const acts = el("div","acts");
   const btn = (txt, st) => { const b = el("button", null, txt); b.type = "button"; b.onclick = () => setStatut(a, st); acts.append(b); };
