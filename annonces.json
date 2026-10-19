@@ -8,7 +8,7 @@
     "Pas de neuf",
     "Pas de grande résidence"
   ],
-  "derniere_verif": "2026-10-19T12:02:49+02:00",
+  "derniere_verif": "2026-10-19T12:59:29+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -165,6 +165,44 @@
       "url": "https://www.lesiteimmo.com/acheter/appartement-3pieces/antibes-06160/32818436",
       "lien_direct": true,
       "ajoutee_le": "2026-10-19T08:05:00+02:00"
+    },
+    {
+      "id": "cannes-basse-californie-66",
+      "commune": "Cannes",
+      "quartier": "Basse Californie",
+      "prix": 450000,
+      "prix_estime": false,
+      "surface": 66,
+      "exterieur": "Terrasse 6 m² + balcons",
+      "titre": "3 pièces avec terrasse Sud-Est en Basse Californie",
+      "atouts": [
+        "Parking",
+        "Ascenseur",
+        "Particulier"
+      ],
+      "source": "PAP",
+      "url": "https://www.pap.fr/annonces/appartement-cannes-basse-californie-r463302026",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-19T12:59:29+02:00"
+    },
+    {
+      "id": "cannes-basse-californie-67",
+      "commune": "Cannes",
+      "quartier": "Basse Californie",
+      "prix": 500000,
+      "prix_estime": false,
+      "surface": 67,
+      "exterieur": "Terrasse plein sud + balcon (12 m²)",
+      "titre": "3 pièces près de la Croisette, terrasse plein sud",
+      "atouts": [
+        "Garage",
+        "Petite résidence",
+        "Ascenseur"
+      ],
+      "source": "French Property",
+      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aj4nw3vuwyu5dz89",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-19T12:59:29+02:00"
     }
   ]
 }
