@@ -8,7 +8,7 @@
     "Pas de neuf",
     "Pas de grande résidence"
   ],
-  "derniere_verif": "2026-10-19T07:03:40+02:00",
+  "derniere_verif": "2026-10-19T08:05:00+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -107,6 +107,64 @@
       "url": "https://www.pap.fr/annonces/appartement-cannes-06400-r462202852",
       "lien_direct": true,
       "ajoutee_le": "2026-10-18T21:58:22+02:00"
+    },
+    {
+      "id": "antibes-coeur-de-ville-65",
+      "commune": "Antibes",
+      "quartier": "Cœur de ville",
+      "prix": 455000,
+      "prix_estime": false,
+      "surface": 65,
+      "exterieur": "Terrasse",
+      "titre": "3 pièces avec terrasse en cœur de ville",
+      "atouts": [
+        "Centre-ville",
+        "Agence (pro)"
+      ],
+      "source": "Leboncoin",
+      "url": "https://www.leboncoin.fr/vi/3191514806.htm",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-19T08:05:00+02:00"
+    },
+    {
+      "id": "antibes-combes-65",
+      "commune": "Antibes",
+      "quartier": "Les Combes",
+      "prix": 339000,
+      "prix_estime": false,
+      "surface": 65,
+      "exterieur": "Terrasse d'angle 20 m²",
+      "titre": "3 pièces d'angle avec grande terrasse, garage et cave",
+      "atouts": [
+        "Garage",
+        "Cave",
+        "Appartement d'angle",
+        "Parc arboré"
+      ],
+      "source": "EtreProprio",
+      "url": "https://www.etreproprio.com/immobilier-26298529-vente-antibes-quartier-des-combes-3-pieces-d-angle-avec-grande-terrasse-garage-et-cave-antibes",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-19T08:05:00+02:00"
+    },
+    {
+      "id": "antibes-juan-les-pins-jardin-62",
+      "commune": "Antibes",
+      "quartier": "Juan-les-Pins",
+      "prix": 495000,
+      "prix_estime": false,
+      "surface": 62,
+      "exterieur": "Terrasse + jardin privatif",
+      "titre": "3 pièces avec terrasse et jardin, plages à pied",
+      "atouts": [
+        "Garage",
+        "Piscine",
+        "Traversant",
+        "Climatisation"
+      ],
+      "source": "LeSiteImmo",
+      "url": "https://www.lesiteimmo.com/acheter/appartement-3pieces/antibes-06160/32818436",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-19T08:05:00+02:00"
     }
   ]
 }
