@@ -163,7 +163,7 @@ function card(a){
   if (a.titre) c.append(el("p","desc", a.titre));
   if (Array.isArray(a.atouts) && a.atouts.length){
     const t = el("div","tags");
-    a.atouts.forEach(x => t.append(el("span", /^(neuf|bail|livraison)/i.test(x) ? "tag warn" : "tag", x)));
+    a.atouts.forEach(x => t.append(el("span", /(vérifier|option)/i.test(x) ? "tag warn" : "tag", x)));
     c.append(t);
   }
   const foot = el("div","foot");

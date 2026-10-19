@@ -3,10 +3,10 @@
 Liste des appartements à vendre qui correspondent à nos critères :
 
 - Antibes, Juan-les-Pins, Golfe-Juan, Cannes (hors La Bocca) ; pas le reste de Vallauris
-- budget 500 000 € maximum
+- prix entre 350 000 et 500 000 €
 - 3 pièces de 60 à 80 m²
-- terrasse ou balcon obligatoire
-- pas de neuf, pas de grande résidence
+- terrasse ou balcon, ascenseur et parking obligatoires
+- résidence de 10 à 50 lots, ancien ou neuf
 
 Les annonces sont dans `annonces.json`. Une tâche planifiée Claude les met à jour toutes les heures de 7 h à 23 h et envoie une notification quand une nouvelle annonce correspond.
 
