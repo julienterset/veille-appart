@@ -4,213 +4,280 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B6E8A">
 <title>Veille T3 Antibes–Cannes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
 <style>
-*,*::before,*::after{box-sizing:border-box}
-:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-body{margin:0}
-[hidden]{display:none!important}
-/* Layout : en-tête « carnet de recherche » + liste de fiches annonces, une colonne sur mobile, deux sur grand écran */
+/* Riviera : bandeau mer + frise parasol, cartes colorées par ville, une colonne sur mobile, deux sur grand écran */
 :root{
-  --bg:#f3f5f4; --surface:#ffffff; --ink:#15211f; --muted:#5d6b68; --line:#d9e0de;
-  --sea:#0e6a73; --sea-soft:#dbecee; --sun:#b7791f; --sun-soft:#f7ecd8; --off:#8a9491;
-  --display:"Archivo","Arial Narrow",system-ui,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --bg:#EEF4F6; --card:#FFFFFF; --ink:#0E2A3B; --muted:#4A6372; --line:#C9DCE2; --soft:#EEF4F6;
+  --sea:#0B6E8A; --sea-ink:#FFFFFF; --head-sub:#E3F1F5; --head-meta:#CFE8EF;
+  --sun:#F2B33D; --sun-ink:#0E2A3B;
+  --chip:#E2F0F3; --warn:#FCECC8; --warn-ink:#6A4300;
+  --ant:#DCEEF3; --ant-ink:#0B5A72; --can:#E7E6F6; --can-ink:#3C3796; --gj:#E1F1E6; --gj-ink:#24623A;
+  --shadow:0 1px 2px rgba(14,42,59,.08),0 8px 24px rgba(14,42,59,.06);
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0f1716; --surface:#16211f; --ink:#e4ecea; --muted:#9aaaa6; --line:#2a3836;
-  --sea:#5fc3cc; --sea-soft:#163a3d; --sun:#e6b25c; --sun-soft:#3a2e18; --off:#6e7b78; color-scheme:dark}}
+  --bg:#0B1A22; --card:#12252F; --ink:#E4EEF2; --muted:#9DB3BE; --line:#26414E; --soft:#0F2029;
+  --sea:#0B5F78; --head-sub:#D3E8EF; --head-meta:#A9D3E0;
+  --sun:#F2B33D; --sun-ink:#0E2A3B;
+  --chip:#173542; --warn:#3D2E0E; --warn-ink:#F6CF7E;
+  --ant:#143846; --ant-ink:#8FD3E6; --can:#25264A; --can-ink:#C3BFF5; --gj:#163A26; --gj-ink:#9FDCB3;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0f1716; --surface:#16211f; --ink:#e4ecea; --muted:#9aaaa6; --line:#2a3836;
-  --sea:#5fc3cc; --sea-soft:#163a3d; --sun:#e6b25c; --sun-soft:#3a2e18; --off:#6e7b78; color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
-.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
-header{display:flex;flex-direction:column;gap:10px}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sea)}
-h1{font-family:var(--display);font-stretch:78%;font-weight:800;font-size:clamp(30px,6vw,46px);line-height:1;margin:0;text-wrap:balance}
-.crit{display:flex;flex-wrap:wrap;gap:6px}
-.crit span{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
-.status{font-size:13px;color:var(--muted)}
-.status b{color:var(--ink);font-weight:600}
-.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:10px}
-.tabs{display:flex;flex-wrap:wrap;gap:4px}
-.tabs button{font:500 14px var(--body);color:var(--muted);background:none;border:0;border-radius:8px;padding:6px 10px;cursor:pointer}
-.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.tabs .n{font-family:var(--mono);font-size:12px;margin-left:4px;opacity:.8}
-select{font:14px var(--body);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 8px}
-button:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
-.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:14px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.card.nouvelle{border-color:var(--sea);box-shadow:inset 0 0 0 1px var(--sea)}
+  --bg:#0B1A22; --card:#12252F; --ink:#E4EEF2; --muted:#9DB3BE; --line:#26414E; --soft:#0F2029;
+  --sea:#0B5F78; --head-sub:#D3E8EF; --head-meta:#A9D3E0;
+  --sun:#F2B33D; --sun-ink:#0E2A3B;
+  --chip:#173542; --warn:#3D2E0E; --warn-ink:#F6CF7E;
+  --ant:#143846; --ant-ink:#8FD3E6; --can:#25264A; --can-ink:#C3BFF5; --gj:#163A26; --gj-ink:#9FDCB3;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+[hidden]{display:none!important}
+.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1000px;margin:0 auto}
+
+header.top{background:var(--sea);color:var(--sea-ink);padding-top:env(safe-area-inset-top,0px)}
+header.top .wrap{padding-block:26px 24px;display:flex;flex-direction:column;gap:14px}
+.meta{display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--head-meta)}
+h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em;text-wrap:balance}
+.crit{margin:0;font-size:15px;color:var(--head-sub);max-width:60ch}
+.news{display:flex;align-items:center;gap:10px;background:var(--card);color:var(--ink);border-radius:14px;padding:12px 14px;align-self:flex-start;max-width:100%}
+.badge{background:var(--sun);color:var(--sun-ink);font-weight:700;font-size:13px;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.frieze{height:12px;background:repeating-linear-gradient(90deg,#FFFFFF 0 18px,var(--sun) 18px 36px)}
+
+.bar .wrap{padding-block:18px 6px;display:flex;flex-direction:column;gap:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 14px var(--body);border-radius:999px;padding:10px 14px;min-height:44px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sortrow{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.sortrow select{font:600 14px var(--body);color:var(--sea);background:transparent;border:0;min-height:44px;cursor:pointer;text-align:right}
+:root[data-theme="dark"] .sortrow select{color:var(--ant-ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .sortrow select{color:var(--ant-ink)}}
+button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:16px;padding-block:8px 32px}
+.card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}
 .card.ecartee{opacity:.55}
-.top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
-.where{font-weight:600;min-width:0}
-.where small{display:block;font-weight:400;color:var(--muted);font-size:13px}
-.price{font-family:var(--display);font-stretch:80%;font-weight:700;font-size:24px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.price .est{font-family:var(--mono);font-size:11px;font-weight:400;color:var(--sun);display:block;text-align:right}
-.facts{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.facts b{color:var(--ink);font-weight:500}
-.desc{margin:0;font-size:14px;color:var(--ink)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:12px;padding:2px 8px;border-radius:6px;background:var(--sea-soft);color:var(--ink)}
-.tag.warn{background:var(--sun-soft)}
-.pill{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:5px}
-.pill.nouvelle{background:var(--sea);color:var(--bg)}
-.pill.suivi{background:var(--sun);color:var(--bg)}
-.pill.ecartee{background:var(--off);color:var(--bg)}
-.foot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;border-top:1px dashed var(--line);padding-top:10px}
-.meta{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.meta a{color:var(--sea);font-weight:500}
-.acts{display:flex;gap:6px}
-.acts button{font:500 13px var(--body);border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 10px;cursor:pointer}
-.acts button:hover{border-color:var(--sea)}
-.empty{padding:32px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px}
-.note{font-size:12px;color:var(--muted);max-width:70ch}
+.band{padding:16px 18px 14px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.band.ant{background:var(--ant)} .band.can{background:var(--can)} .band.gj{background:var(--gj)}
+.ville{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.band.ant .ville{color:var(--ant-ink)} .band.can .ville{color:var(--can-ink)} .band.gj .ville{color:var(--gj-ink)}
+.quartier{display:block;font-family:var(--display);font-weight:800;font-size:24px;line-height:1.05;margin-top:4px;color:var(--ink)}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:14px}
+.pricerow{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.prix{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.m2{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.est{font-size:12px;color:var(--warn-ink)}
+.facts{display:flex;gap:8px}
+.fact{background:var(--soft);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fact span{font-size:12px;color:var(--muted)} .fact b{font-size:16px}
+.fact.s{flex:1} .fact.e{flex:2}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;font-weight:500;background:var(--chip);border-radius:8px;padding:5px 9px}
+.chip.warn{background:var(--warn);color:var(--warn-ink);font-weight:600}
+.acts{display:flex;gap:8px;align-items:stretch}
+.go{flex:1;display:flex;align-items:center;justify-content:center;background:var(--sea);color:#FFFFFF;text-decoration:none;font-weight:700;font-size:15px;border-radius:12px;min-height:46px;padding:0 12px;text-align:center}
+.go:hover{filter:brightness(1.08)}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 14px var(--body);border-radius:12px;padding:0 14px;min-height:46px;cursor:pointer}
+.btn.icon{width:46px;padding:0;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.btn[aria-pressed="true"]{background:var(--sun);color:var(--sun-ink);border-color:var(--sun)}
+.src{font-size:12px;color:var(--muted)}
+.empty{grid-column:1/-1;padding:32px 16px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:16px;background:var(--card)}
+footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:6px;max-width:1000px}
+footer p{margin:0;max-width:70ch}
 @media (prefers-reduced-motion:no-preference){.card{transition:opacity .2s}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="eyebrow">Veille immobilière · achat</div>
-    <h1>Un 3 pièces entre Antibes et Cannes</h1>
-    <div class="crit" id="crit"></div>
-    <div class="status" id="status">Chargement des annonces…</div>
-  </header>
-
-  <div class="bar">
-    <div class="tabs" role="group" aria-label="Filtrer par statut" id="tabs">
-      <button id="t-actives" data-f="actives" aria-pressed="true">À regarder<span class="n"></span></button>
-      <button id="t-nouvelle" data-f="nouvelle" aria-pressed="false">Nouvelles<span class="n"></span></button>
-      <button id="t-suivi" data-f="suivi" aria-pressed="false">À suivre<span class="n"></span></button>
-      <button id="t-ecartee" data-f="ecartee" aria-pressed="false">Écartées<span class="n"></span></button>
-    </div>
-    <label class="status">Trier
-      <select id="sort">
-        <option value="date">Plus récentes</option>
-        <option value="prix">Prix croissant</option>
-        <option value="m2">Prix au m² croissant</option>
-        <option value="surface">Surface décroissante</option>
-      </select>
-    </label>
+<header class="top">
+  <div class="wrap gutter">
+    <div class="meta"><span>Veille appart</span><span id="verif">Chargement…</span></div>
+    <h1>Notre 3 pièces au bord de l'eau</h1>
+    <p class="crit" id="crit">Antibes, Juan-les-Pins, Golfe-Juan et Cannes</p>
+    <div class="news" id="news" hidden><span class="badge" id="newsCount"></span><span>depuis votre dernière visite</span></div>
   </div>
+</header>
+<div class="frieze" aria-hidden="true"></div>
 
-  <main class="list" id="list">
-    <div class="empty">Chargement des annonces…</div>
-  </main>
-
-  <p class="note">Les annonces sont repérées automatiquement sur les portails publics (SeLoger, Leboncoin, ParuVendu, réseaux d'agences). « Annonce » ouvre l'annonce elle-même ; « Liste » ouvre la page de résultats où le bien a été repéré, à retrouver avec la surface et le prix. « Prix estimé » signifie que le prix a été recalculé à partir du prix au m² affiché. Vos choix « À suivre » et « Écarter » sont gardés dans ce navigateur uniquement. Vérifiez toujours l'annonce d'origine : elle peut avoir été vendue ou modifiée.</p>
+<div class="bar">
+  <div class="wrap gutter">
+    <div class="tabs" role="group" aria-label="Filtrer les annonces" id="tabs">
+      <button type="button" id="t-actives" data-f="actives" aria-pressed="true">À regarder · <span class="n">0</span></button>
+      <button type="button" id="t-nouvelles" data-f="nouvelles" aria-pressed="false">Nouvelles · <span class="n">0</span></button>
+      <button type="button" id="t-suivi" data-f="suivi" aria-pressed="false">À suivre · <span class="n">0</span></button>
+      <button type="button" id="t-ecartee" data-f="ecartee" aria-pressed="false">Écartées · <span class="n">0</span></button>
+    </div>
+    <div class="sortrow">
+      <span id="sortLabel">Les plus récentes d'abord</span>
+      <label><span hidden>Trier</span>
+        <select id="sort" aria-label="Trier les annonces">
+          <option value="date">Trier : récentes</option>
+          <option value="prix">Trier : prix</option>
+          <option value="m2">Trier : prix au m²</option>
+          <option value="surface">Trier : surface</option>
+        </select>
+      </label>
+    </div>
+  </div>
 </div>
-<script>
-const DEFAULT_CRIT = ["Antibes · Juan-les-Pins · Golfe-Juan · Vallauris · Cannes La Bocca","≤ 500 000 €","3 pièces","60 à 80 m²","Terrasse ou balcon"];
-const LABEL = {nouvelle:"Nouvelle", suivi:"À suivre", ecartee:"Écartée"};
-let items = [], filter = "actives";
-try { const s = localStorage.getItem("veille-sort"); if (s) document.getElementById("sort").value = s; } catch(e) {}
 
+<main class="wrap gutter">
+  <div class="list" id="list"><div class="empty">Chargement des annonces…</div></div>
+</main>
+
+<footer>
+  <div class="wrap gutter">
+    <p>Annonces repérées toutes les heures, de 7 h à 23 h, dans vos alertes Leboncoin et SeLoger et sur les sites d'agences. « À suivre » et « Écarter » sont gardés dans ce navigateur uniquement. Vérifiez toujours l'annonce d'origine : elle peut avoir été vendue ou modifiée.</p>
+  </div>
+</footer>
+
+<script>
+const SORT_LABEL = {date:"Les plus récentes d'abord", prix:"Du moins cher au plus cher", m2:"Du prix au m² le plus bas au plus haut", surface:"Des plus grandes aux plus petites"};
+let items = [], filter = "actives", lastSeen = 0;
+const $ = id => document.getElementById(id);
 const fmt = n => n.toLocaleString("fr-FR");
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const store = {
+  get(k, d){ try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+};
+try { const s = store.get("veille-sort", "date"); if (SORT_LABEL[s]) $("sort").value = s; } catch(e){}
+lastSeen = store.get("veille-last-seen", 0);
+const markSeen = () => store.set("veille-last-seen", Date.now());
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") markSeen(); });
+window.addEventListener("pagehide", markSeen);
 
-function renderCrit(list){
-  const c = document.getElementById("crit"); c.replaceChildren();
-  (list && list.length ? list : DEFAULT_CRIT).forEach(t => c.append(el("span", null, t)));
+function quand(iso){
+  const d = new Date(iso); if (isNaN(d)) return "";
+  const now = new Date(), j = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const hm = d.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"}).replace(":", " h ");
+  if (d >= j) return "aujourd'hui, " + hm;
+  if (d >= new Date(j - 864e5)) return "hier, " + hm;
+  return "le " + d.toLocaleDateString("fr-FR",{day:"numeric",month:"long"});
 }
-renderCrit();
+function ville(a){
+  const q = (a.quartier || "").toLowerCase();
+  if (q.includes("golfe")) return {cls:"gj", nom:"Golfe-Juan"};
+  if (a.commune === "Cannes") return {cls:"can", nom:"Cannes"};
+  return {cls:"ant", nom:a.commune || "Antibes"};
+}
+function quartierAffiche(a){
+  const q = a.quartier || a.commune || "";
+  return q.replace(/^Golfe-Juan[,\s·-]*/i, "") || q;
+}
 
 function render(){
-  const counts = {nouvelle:0, suivi:0, ecartee:0};
-  items.forEach(a => counts[a.statut] = (counts[a.statut]||0) + 1);
-  counts.actives = counts.nouvelle + counts.suivi;
+  const st = store.get("veille-statuts", {});
+  items.forEach(a => { a.statut = st[a.id] || ""; a.nouveau = new Date(a.ajoutee_le).getTime() > lastSeen; });
+  const c = {
+    actives: items.filter(a => a.statut !== "ecartee").length,
+    nouvelles: items.filter(a => a.nouveau && a.statut !== "ecartee").length,
+    suivi: items.filter(a => a.statut === "suivi").length,
+    ecartee: items.filter(a => a.statut === "ecartee").length
+  };
   document.querySelectorAll("#tabs button").forEach(b => {
     b.setAttribute("aria-pressed", b.dataset.f === filter ? "true" : "false");
-    b.querySelector(".n").textContent = counts[b.dataset.f] || 0;
+    b.querySelector(".n").textContent = c[b.dataset.f];
   });
-  const sort = document.getElementById("sort").value;
-  let view = items.filter(a => filter === "actives" ? a.statut !== "ecartee" : a.statut === filter);
+  $("news").hidden = !c.nouvelles;
+  $("newsCount").textContent = c.nouvelles + (c.nouvelles > 1 ? " nouvelles" : " nouvelle");
+
+  const sort = $("sort").value;
+  $("sortLabel").textContent = SORT_LABEL[sort];
   const m2 = a => a.prix && a.surface ? a.prix / a.surface : Infinity;
+  let view = items.filter(a =>
+    filter === "actives" ? a.statut !== "ecartee" :
+    filter === "nouvelles" ? a.nouveau && a.statut !== "ecartee" :
+    a.statut === filter);
   view.sort((a,b) => sort === "prix" ? (a.prix||1e12)-(b.prix||1e12)
     : sort === "m2" ? m2(a)-m2(b)
     : sort === "surface" ? (b.surface||0)-(a.surface||0)
     : String(b.ajoutee_le||"").localeCompare(String(a.ajoutee_le||"")));
 
-  const list = document.getElementById("list"); list.replaceChildren();
+  const list = $("list"); list.replaceChildren();
   if (!view.length){
-    list.append(el("div","empty", items.length ? "Aucune annonce dans cette catégorie." : "Aucune annonce pour l'instant. La veille ajoutera ici chaque bien qui correspond aux critères."));
+    list.append(el("div","empty", items.length
+      ? (filter === "nouvelles" ? "Rien de nouveau depuis votre dernière visite." : "Aucune annonce dans cette catégorie.")
+      : "Aucune annonce pour l'instant. La veille ajoutera ici chaque bien qui correspond à vos critères."));
     return;
   }
   view.forEach(a => list.append(card(a)));
 }
 
 function card(a){
-  const c = el("article", "card " + a.statut);
-  const top = el("div","top");
-  const w = el("div","where", a.commune || "");
-  w.append(el("small", null, a.quartier || ""));
-  const p = el("div","price", a.prix ? fmt(a.prix) + " €" : "Prix n.c.");
-  if (a.prix_estime) p.append(el("span","est","prix estimé"));
-  top.append(w, p);
+  const v = ville(a);
+  const c = el("article", "card" + (a.statut === "ecartee" ? " ecartee" : ""));
+  const band = el("div", "band " + v.cls);
+  const t = el("div"); t.style.minWidth = "0";
+  t.append(el("span","ville", v.nom), el("span","quartier", quartierAffiche(a)));
+  band.append(t);
+  if (a.nouveau && a.statut !== "ecartee") band.append(el("span","badge","Nouveau"));
 
-  const f = el("div","facts");
-  const add = (label, val) => { const s = el("span", null, label + " "); s.append(el("b", null, val)); f.append(s); };
-  if (a.surface) add("Surface", fmt(a.surface) + " m²");
-  if (a.prix && a.surface) add("Prix/m²", fmt(Math.round(a.prix / a.surface)) + " €");
-  if (a.exterieur) add("Extérieur", a.exterieur);
+  const body = el("div","body");
+  const pr = el("div","pricerow");
+  const p = el("span","prix", a.prix ? fmt(a.prix) + " €" : "Prix n.c.");
+  const right = el("span","m2", a.prix && a.surface ? fmt(Math.round(a.prix / a.surface)) + " €/m²" : "");
+  if (a.prix_estime) right.append(el("span","est"," · prix estimé"));
+  pr.append(p, right);
 
-  c.append(top, f);
-  if (a.titre) c.append(el("p","desc", a.titre));
-  if (Array.isArray(a.atouts) && a.atouts.length){
-    const t = el("div","tags");
-    a.atouts.forEach(x => t.append(el("span", /(vérifier|option)/i.test(x) ? "tag warn" : "tag", x)));
-    c.append(t);
-  }
-  const foot = el("div","foot");
-  const meta = el("div","meta");
-  meta.append(el("span","pill " + a.statut, LABEL[a.statut] || a.statut));
-  if (a.url){ const l = el("a", null, (a.lien_direct === false ? "Liste " : "Annonce ") + (a.source || "") + " ↗"); l.href = a.url; l.target = "_blank"; l.rel = "noopener"; if (a.lien_direct === false) l.title = "Lien vers la page de résultats où l'annonce a été repérée"; meta.append(l); }
-  if (a.ajoutee_le) meta.append(el("span", null, "repérée le " + new Date(a.ajoutee_le).toLocaleDateString("fr-FR",{day:"numeric",month:"short"})));
+  const facts = el("div","facts");
+  const f1 = el("div","fact s"); f1.append(el("span",null,"Surface"), el("b",null, a.surface ? fmt(Math.round(a.surface)) + " m²" : "n.c."));
+  const f2 = el("div","fact e"); f2.append(el("span",null,"Extérieur"), el("b",null, a.exterieur || "n.c."));
+  facts.append(f1, f2);
+
+  const chips = el("div","chips");
+  (a.atouts || []).forEach(x => chips.append(el("span", /vérifier|option/i.test(x) ? "chip warn" : "chip", x)));
+
   const acts = el("div","acts");
-  const btn = (txt, st) => { const b = el("button", null, txt); b.type = "button"; b.onclick = () => setStatut(a, st); acts.append(b); };
-  if (a.statut !== "suivi") btn("À suivre", "suivi");
-  if (a.statut !== "ecartee") btn("Écarter", "ecartee");
-  if (a.statut === "ecartee") btn("Remettre", "suivi");
-  foot.append(meta, acts);
-  c.append(foot);
+  const go = el("a","go","Voir l'annonce"); go.href = a.url; go.target = "_blank"; go.rel = "noopener";
+  const suivre = el("button","btn", a.statut === "suivi" ? "Suivie" : "À suivre"); suivre.type = "button";
+  suivre.setAttribute("aria-pressed", a.statut === "suivi" ? "true" : "false");
+  suivre.onclick = () => setStatut(a, a.statut === "suivi" ? "" : "suivi");
+  const ecart = el("button","btn icon"); ecart.type = "button";
+  if (a.statut === "ecartee"){ ecart.textContent = "↺"; ecart.setAttribute("aria-label","Remettre dans la liste"); ecart.onclick = () => setStatut(a, ""); }
+  else { ecart.setAttribute("aria-label","Écarter"); ecart.innerHTML = '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>'; ecart.onclick = () => setStatut(a, "ecartee"); }
+  acts.append(go, suivre, ecart);
+
+  body.append(pr, facts);
+  if (chips.childElementCount) body.append(chips);
+  body.append(acts, el("span","src", (a.source || "") + (a.ajoutee_le ? " · repérée " + quand(a.ajoutee_le) : "")));
+  c.append(band, body);
   return c;
 }
 
-function loadStatuts(){ try { return JSON.parse(localStorage.getItem("veille-statuts")||"{}"); } catch(e){ return {}; } }
-function setStatut(a, statut){
-  const m = loadStatuts(); m[a.id] = statut;
-  try { localStorage.setItem("veille-statuts", JSON.stringify(m)); } catch(e) {}
-  a.statut = statut; render();
-}
-document.getElementById("tabs").addEventListener("click", e => {
-  const b = e.target.closest("button"); if (!b) return; filter = b.dataset.f; render();
-});
-document.getElementById("sort").addEventListener("change", e => {
-  try { localStorage.setItem("veille-sort", e.target.value); } catch(_) {}
+function setStatut(a, s){
+  const st = store.get("veille-statuts", {});
+  if (s) st[a.id] = s; else delete st[a.id];
+  store.set("veille-statuts", st);
   render();
-});
+}
+
+$("tabs").addEventListener("click", e => { const b = e.target.closest("button"); if (b){ filter = b.dataset.f; render(); } });
+$("sort").addEventListener("change", e => { store.set("veille-sort", e.target.value); render(); });
 
 (async () => {
-  const st = document.getElementById("status");
   try {
     const r = await fetch("annonces.json?t=" + Date.now(), {cache:"no-store"});
     const d = await r.json();
-    const m = loadStatuts();
-    items = (d.annonces||[]).map(a => ({...a, statut: m[a.id] || "nouvelle"}));
-    if (d.criteres) renderCrit(d.criteres);
-    st.replaceChildren();
+    items = d.annonces || [];
+    if (Array.isArray(d.criteres) && d.criteres.length) $("crit").textContent = d.criteres.join(" · ");
     if (d.derniere_verif){
-      st.append("Dernière vérification ");
-      st.append(el("b", null, new Date(d.derniere_verif).toLocaleString("fr-FR",{weekday:"short",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})));
-      if (d.frequence) st.append(" · " + d.frequence);
-    }
+      const q = quand(d.derniere_verif);
+      $("verif").textContent = "Vérifié " + (q.startsWith("aujourd'hui, ") ? "à " + q.slice(13) : q);
+    } else $("verif").textContent = "";
     render();
-  } catch(e){ st.textContent = "La liste n'a pas pu être chargée. Rechargez la page."; }
+  } catch(e){
+    $("verif").textContent = "";
+    $("list").replaceChildren(el("div","empty","La liste n'a pas pu être chargée. Rechargez la page."));
+  }
 })();
 </script>
 </body>
