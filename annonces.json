@@ -1,121 +1,126 @@
 {
-  "criteres": [
-    "Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)",
-    "350 000 à 500 000 €",
-    "3 pièces",
-    "60 à 80 m²",
-    "Terrasse ou balcon",
+ "criteres": [
+  "Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)",
+  "350 000 à 500 000 €",
+  "3 pièces",
+  "60 à 80 m²",
+  "Terrasse ou balcon",
+  "Ascenseur",
+  "Parking",
+  "Résidence de 10 à 50 lots",
+  "Ancien ou neuf"
+ ],
+ "derniere_verif": "2026-10-19T18:58:32+02:00",
+ "frequence": "vérification toutes les heures, de 7 h à 23 h",
+ "annonces": [
+  {
+   "id": "antibes-ponteil-72",
+   "commune": "Antibes",
+   "quartier": "Le Ponteil",
+   "prix": 485000,
+   "prix_estime": false,
+   "surface": 72.02,
+   "exterieur": "Balcon + terrasse",
+   "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
+   "atouts": [
     "Ascenseur",
-    "Parking",
-    "Résidence de 10 à 50 lots",
-    "Ancien ou neuf"
-  ],
-  "derniere_verif": "2026-10-19T18:58:32+02:00",
-  "frequence": "vérification toutes les heures, de 7 h à 23 h",
-  "annonces": [
-    {
-      "id": "antibes-ponteil-72",
-      "commune": "Antibes",
-      "quartier": "Le Ponteil",
-      "prix": 485000,
-      "prix_estime": false,
-      "surface": 72.02,
-      "exterieur": "Balcon + terrasse",
-      "titre": "5e étage, 2 chambres, bon état, copropriété de 48 lots",
-      "atouts": [
-        "Ascenseur",
-        "Garage fermé 24 m²",
-        "Cave",
-        "48 lots"
-      ],
-      "source": "Orpi",
-      "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
-      "ajoutee_le": "2026-10-18T19:15:00+02:00",
-      "lien_direct": true
-    },
-    {
-      "id": "antibes-juan-les-pins-exflora-66",
-      "commune": "Antibes",
-      "quartier": "Juan-les-Pins (Exflora)",
-      "prix": 365000,
-      "prix_estime": false,
-      "surface": 66.23,
-      "exterieur": "Terrasse 16 m² plein sud",
-      "titre": "T3 avec terrasse sud près du parc Exflora",
-      "atouts": [
-        "Ascenseur",
-        "Parking en sous-sol",
-        "Cave",
-        "Climatisation",
-        "12 lots"
-      ],
-      "source": "Orpi",
-      "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06160-f9603d3c-301d-4f3d-a071-db87f87c92e9/",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-18T21:00:00+02:00"
-    },
-    {
-      "id": "cannes-carnot-70",
-      "commune": "Cannes",
-      "quartier": "Carnot",
-      "prix": 435000,
-      "prix_estime": false,
-      "surface": 70,
-      "exterieur": "Terrasse couverte ~7 m²",
-      "titre": "3 pièces rénové avec terrasse, quartier Carnot",
-      "atouts": [
-        "Ascenseur",
-        "Garage en option +30 000 €",
-        "Rénové",
-        "Cave",
-        "Nombre de lots à vérifier"
-      ],
-      "source": "French Property",
-      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aesceyasxqf0a3ig",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-18T21:58:22+02:00"
-    },
-    {
-      "id": "cannes-basse-californie-67",
-      "commune": "Cannes",
-      "quartier": "Basse Californie",
-      "prix": 500000,
-      "prix_estime": false,
-      "surface": 67,
-      "exterieur": "Terrasse plein sud + balcon (12 m²)",
-      "titre": "3 pièces près de la Croisette, terrasse plein sud",
-      "atouts": [
-        "Ascenseur",
-        "Garage",
-        "Petite résidence",
-        "Nombre de lots à vérifier"
-      ],
-      "source": "French Property",
-      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aj4nw3vuwyu5dz89",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-19T12:59:29+02:00"
-    },
-    {
-      "id": "cannes-montrose-66",
-      "commune": "Cannes",
-      "quartier": "Montrose",
-      "prix": 404500,
-      "prix_estime": false,
-      "surface": 66,
-      "exterieur": "2 terrasses",
-      "titre": "3 pièces avec deux terrasses, Montrose",
-      "atouts": [
-        "Ascenseur",
-        "Parking privatif",
-        "Cave",
-        "Climatisation",
-        "DPE B",
-        "Nombre de lots à vérifier"
-      ],
-      "source": "LeSiteImmo",
-      "url": "https://www.lesiteimmo.com/acheter/appartement-3pieces/cannes-06400/33060854",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-19T17:58:00+02:00"
-    }
-  ]
+    "Garage fermé 24 m²",
+    "Cave",
+    "48 lots"
+   ],
+   "source": "Orpi",
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06600-892c32d5-ee04-4630-94f2-dfb16e09383a/",
+   "ajoutee_le": "2026-10-18T19:15:00+02:00",
+   "lien_direct": true,
+   "photo": "https://cutjhqvjma.cloudimg.io/_prod_/sweepbright-s3/892c32d5-ee04-4630-94f2-dfb16e09383a--b31b4f8f-0eb9-486d-8b63-f9a613256080.jpg?p=estate-v2&ci_url_encoded=1&ci_sign=43be6f0e9b641df858104658e717735e1c6a5189"
+  },
+  {
+   "id": "antibes-juan-les-pins-exflora-66",
+   "commune": "Antibes",
+   "quartier": "Juan-les-Pins (Exflora)",
+   "prix": 365000,
+   "prix_estime": false,
+   "surface": 66.23,
+   "exterieur": "Terrasse 16 m² plein sud",
+   "titre": "T3 avec terrasse sud près du parc Exflora",
+   "atouts": [
+    "Ascenseur",
+    "Parking en sous-sol",
+    "Cave",
+    "Climatisation",
+    "12 lots"
+   ],
+   "source": "Orpi",
+   "url": "https://www.orpi.com/annonce-vente-appartement-t3-antibes-06160-f9603d3c-301d-4f3d-a071-db87f87c92e9/",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-18T21:00:00+02:00",
+   "photo": "https://cutjhqvjma.cloudimg.io/_prod_/sweepbright-s3/f9603d3c-301d-4f3d-a071-db87f87c92e9--93b5c4ec-9ce1-4a29-8196-805d2fd18a7e.jpg?p=estate-v2&ci_url_encoded=1&ci_sign=7f69349174e4dcc529100b24c8692db39d9ac290"
+  },
+  {
+   "id": "cannes-carnot-70",
+   "commune": "Cannes",
+   "quartier": "Carnot",
+   "prix": 435000,
+   "prix_estime": false,
+   "surface": 70,
+   "exterieur": "Terrasse couverte ~7 m²",
+   "titre": "3 pièces rénové avec terrasse, quartier Carnot",
+   "atouts": [
+    "Ascenseur",
+    "Garage en option +30 000 €",
+    "Rénové",
+    "Cave",
+    "Nombre de lots à vérifier"
+   ],
+   "source": "French Property",
+   "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aesceyasxqf0a3ig",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-18T21:58:22+02:00",
+   "photo": "https://cdn3.french-property.com/agency_3772/Aesceyasxqf0a3ig/3772-Aesceyasxqf0a3ig-0b10a042581d757b65ad.jpg?height=315&width=600"
+  },
+  {
+   "id": "cannes-basse-californie-67",
+   "commune": "Cannes",
+   "quartier": "Basse Californie",
+   "prix": 500000,
+   "prix_estime": false,
+   "surface": 67,
+   "exterieur": "Terrasse plein sud + balcon (12 m²)",
+   "titre": "3 pièces près de la Croisette, terrasse plein sud",
+   "atouts": [
+    "Ascenseur",
+    "Garage",
+    "Petite résidence",
+    "Nombre de lots à vérifier"
+   ],
+   "source": "French Property",
+   "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aj4nw3vuwyu5dz89",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-19T12:59:29+02:00",
+   "photo": "https://cdn3.french-property.com/agency_3772/Aj4nw3vuwyu5dz89/3772-Aj4nw3vuwyu5dz89-12258c9bb7787bc830f9.jpg?height=315&width=600"
+  },
+  {
+   "id": "cannes-montrose-66",
+   "commune": "Cannes",
+   "quartier": "Montrose",
+   "prix": 404500,
+   "prix_estime": false,
+   "surface": 66,
+   "exterieur": "2 terrasses",
+   "titre": "3 pièces avec deux terrasses, Montrose",
+   "atouts": [
+    "Ascenseur",
+    "Parking privatif",
+    "Cave",
+    "Climatisation",
+    "DPE B",
+    "Nombre de lots à vérifier"
+   ],
+   "source": "LeSiteImmo",
+   "url": "https://www.lesiteimmo.com/acheter/appartement-3pieces/cannes-06400/33060854",
+   "lien_direct": true,
+   "ajoutee_le": "2026-10-19T17:58:00+02:00",
+   "photo": "https://media.studio-net.fr/biens/33060854/x6a98cbfc3801d"
+  }
+ ]
 }
