@@ -10,7 +10,7 @@
     "Résidence de 10 à 50 lots",
     "Ancien ou neuf"
   ],
-  "derniere_verif": "2026-10-20T22:00:00+02:00",
+  "derniere_verif": "2026-10-20T23:04:05+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -56,30 +56,7 @@
       "lien_direct": true,
       "ajoutee_le": "2026-10-18T21:00:00+02:00",
       "photo": "https://cutjhqvjma.cloudimg.io/_prod_/sweepbright-s3/f9603d3c-301d-4f3d-a071-db87f87c92e9--93b5c4ec-9ce1-4a29-8196-805d2fd18a7e.jpg?p=estate-v2&ci_url_encoded=1&ci_sign=7f69349174e4dcc529100b24c8692db39d9ac290",
-      "verifiee_le": "2026-10-20T09:04:50+02:00"
-    },
-    {
-      "id": "cannes-carnot-70",
-      "commune": "Cannes",
-      "quartier": "Carnot",
-      "prix": 435000,
-      "prix_estime": false,
-      "surface": 70,
-      "exterieur": "Terrasse couverte ~7 m²",
-      "titre": "3 pièces rénové avec terrasse, quartier Carnot",
-      "atouts": [
-        "Ascenseur",
-        "Garage en option +30 000 €",
-        "Rénové",
-        "Cave",
-        "Nombre de lots à vérifier"
-      ],
-      "source": "French Property",
-      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aesceyasxqf0a3ig",
-      "lien_direct": true,
-      "ajoutee_le": "2026-10-18T21:58:22+02:00",
-      "photo": "https://cdn3.french-property.com/agency_3772/Aesceyasxqf0a3ig/3772-Aesceyasxqf0a3ig-0b10a042581d757b65ad.jpg?height=315&width=600",
-      "verifiee_le": "2026-10-20T09:04:50+02:00"
+      "verifiee_le": "2026-10-20T23:04:05+02:00"
     },
     {
       "id": "cannes-basse-californie-67",
@@ -173,5 +150,31 @@
       "verifiee_le": "2026-10-20T11:58:00+02:00"
     }
   ],
-  "retirees": []
+  "retirees": [
+    {
+      "id": "cannes-carnot-70",
+      "commune": "Cannes",
+      "quartier": "Carnot",
+      "prix": 435000,
+      "prix_estime": false,
+      "surface": 70,
+      "exterieur": "Terrasse couverte ~7 m²",
+      "titre": "3 pièces rénové avec terrasse, quartier Carnot",
+      "atouts": [
+        "Ascenseur",
+        "Garage en option +30 000 €",
+        "Rénové",
+        "Cave",
+        "Nombre de lots à vérifier"
+      ],
+      "source": "French Property",
+      "url": "https://www.french-property.com/fr/bien-a-vendre/3772-Aesceyasxqf0a3ig",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-18T21:58:22+02:00",
+      "photo": "https://cdn3.french-property.com/agency_3772/Aesceyasxqf0a3ig/3772-Aesceyasxqf0a3ig-0b10a042581d757b65ad.jpg?height=315&width=600",
+      "verifiee_le": "2026-10-20T09:04:50+02:00",
+      "retiree_le": "2026-10-20T23:04:05+02:00",
+      "motif": "Annonce supprimée"
+    }
+  ]
 }
