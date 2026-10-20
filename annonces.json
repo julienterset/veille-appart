@@ -10,7 +10,7 @@
     "Résidence de 10 à 50 lots",
     "Ancien ou neuf"
   ],
-  "derniere_verif": "2026-10-20T11:03:24+02:00",
+  "derniere_verif": "2026-10-20T11:58:00+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -144,14 +144,12 @@
         "2e étage"
       ],
       "source": "FNAIM",
-      "url": "https://www.fnaim.fr/annonce-immobiliere/52974193/17-acheter-appartement-juan-les-pins-06160.htm",
+      "url": "https://www.fnaim.fr/annonce-immobiliere/52943944/17-acheter-appartement-juan-les-pins-06160.htm",
       "photo": "https://imagesv2.fnaim.fr/images1/img/69df8d1447143736e469c9c5.jpg",
       "lien_direct": true,
       "ajoutee_le": "2026-10-19T21:05:00+02:00",
-      "verifiee_le": "2026-10-19T21:05:00+02:00"
-    }
-  ],
-  "retirees": [
+      "verifiee_le": "2026-10-20T11:58:00+02:00"
+    },
     {
       "id": "antibes-juan-les-pins-69",
       "commune": "Antibes",
@@ -165,17 +163,15 @@
         "Ascenseur",
         "Garage 15 m²",
         "35 lots",
-        "Cave",
-        "Exclusivité"
+        "Cave"
       ],
       "source": "FNAIM",
-      "url": "https://www.fnaim.fr/annonce-immobiliere/52859375/17-acheter-appartement-juan-les-pins-06160.htm",
+      "url": "https://www.fnaim.fr/annonce-immobiliere/52757119/17-acheter-appartement-juan-les-pins-06160.htm",
       "photo": "https://imagesv2.fnaim.fr/images1/img/6a184bc2f34adfa2af45ad13.jpg",
       "lien_direct": true,
-      "ajoutee_le": "2026-10-19T21:05:00+02:00",
-      "verifiee_le": "2026-10-19T21:05:00+02:00",
-      "retiree_le": "2026-10-20T10:05:15+02:00",
-      "motif": "Annonce remplacée : la fiche affiche désormais un autre bien (85 m², 695 000 €)"
+      "ajoutee_le": "2026-10-20T11:58:00+02:00",
+      "verifiee_le": "2026-10-20T11:58:00+02:00"
     }
-  ]
+  ],
+  "retirees": []
 }
