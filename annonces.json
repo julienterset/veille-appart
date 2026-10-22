@@ -10,7 +10,7 @@
     "Résidence de 10 à 50 lots",
     "Ancien ou neuf"
   ],
-  "derniere_verif": "2026-10-22T08:03:40+02:00",
+  "derniere_verif": "2026-10-22T09:09:19+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -170,7 +170,7 @@
       "photo": "https://media.apimo.pro/cache/5fe4b3756ec6ce80dde76372c9a46cfa_894eb85936_1448-original.jpg",
       "lien_direct": true,
       "ajoutee_le": "2026-10-21T17:05:00+02:00",
-      "verifiee_le": "2026-10-21T17:05:00+02:00"
+      "verifiee_le": "2026-10-22T09:09:19+02:00"
     }
   ],
   "retirees": [
