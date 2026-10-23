@@ -10,7 +10,7 @@
     "Résidence de 10 à 50 lots",
     "Ancien ou neuf"
   ],
-  "derniere_verif": "2026-10-23T22:08:49+02:00",
+  "derniere_verif": "2026-10-23T23:05:00+02:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -194,6 +194,30 @@
       "lien_direct": true,
       "ajoutee_le": "2026-10-23T14:09:57+02:00",
       "verifiee_le": "2026-10-23T14:09:57+02:00"
+    },
+    {
+      "id": "cannes-basse-californie-66",
+      "commune": "Cannes",
+      "quartier": "Basse Californie",
+      "prix": 450000,
+      "prix_estime": false,
+      "surface": 66,
+      "exterieur": "Terrasse plein sud + terrasse côté nord",
+      "titre": "T3 Basse Californie avec garage et cave",
+      "atouts": [
+        "Ascenseur",
+        "Garage fermé en sous-sol",
+        "Nombre de lots à vérifier",
+        "Cave",
+        "Prix baissé",
+        "Peut-être le même bien que l'annonce French Property à 500 000 €"
+      ],
+      "source": "LeSiteImmo (Ccr Immobilier)",
+      "url": "https://www.lesiteimmo.com/acheter/appartement-3pieces/cannes-06400/32239292",
+      "photo": "https://media.studio-net.fr/biens/32239292/x6a4793023239f",
+      "lien_direct": true,
+      "ajoutee_le": "2026-10-23T23:05:00+02:00",
+      "verifiee_le": "2026-10-23T23:05:00+02:00"
     }
   ],
   "retirees": [
