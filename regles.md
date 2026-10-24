@@ -1,14 +1,15 @@
 # Règles de la veille appartement
 
 Ce fichier est la **seule source** des critères de recherche. La tâche planifiée le relit à chaque passage et applique ce qui y est écrit.
-Pour changer un critère, modifiez ce fichier (sur github.com : ouvrir le fichier, icône crayon, puis « Commit changes »). La modification s'applique au passage suivant.
+Pour changer un critère, utilisez la page Réglages : https://julienterset.github.io/veille-appart/reglages.html
+Vous pouvez aussi modifier ce fichier à la main ; la page Réglages vous préviendra alors avant d'écraser ces modifications.
 
 ## Résumé affiché sur la page
 
 Une ligne par critère, reprise telle quelle en haut de la page :
 
 - Antibes · Juan-les-Pins · Golfe-Juan · Cannes (hors La Bocca)
-- 400 000 à 500 000 
+- 400 000 à 500 000 €
 - 3 ou 4 pièces
 - 70 à 90 m²
 - Terrasse ou balcon
@@ -20,17 +21,18 @@ Une ligne par critère, reprise telle quelle en haut de la page :
 ## Critères obligatoires
 
 ### Zone
-- Acceptées : Antibes (dont Juan-les-Pins), Golfe-Juan, Cannes.
+- Acceptées : Antibes, Juan-les-Pins, Golfe-Juan, Cannes (hors La Bocca).
 - Golfe-Juan fait partie de la commune de Vallauris (06220). Une annonce « Vallauris » n'est acceptée que si elle situe explicitement le bien à Golfe-Juan (port, plages, front de mer, centre de Golfe-Juan).
 - Exclues : le reste de Vallauris (centre-ville de Vallauris, Pertuades, Fumades, Hauts de Vallauris…) et toute annonce Vallauris dont la localisation est floue.
 - Exclue : Cannes La Bocca (06150, Bocca Nord, Bocca Sud, Ranguin, Abadie, Gourguettes…).
+- Toute autre commune est exclue.
 
 ### Prix
 - Entre 400 000 € et 500 000 €, bornes incluses.
 
 ### Type et surface
-- 3 ou 4 pièces (T3 ou T4)
-- Surface entre 70 et 90 m².
+- 3 ou 4 pièces (T3 ou T4).
+- Surface : entre 70 m² et 90 m², bornes incluses.
 
 ### Équipements
 - Terrasse ou balcon.
@@ -71,3 +73,7 @@ Une ligne par critère, reprise telle quelle en haut de la page :
 
 ## Notifications
 - Notifier en cas de nouvelle annonce, d'annonce retirée ou de baisse de prix. Sinon, rien de particulier.
+
+<!-- REGLAGES (lu par la page Réglages, ne pas modifier)
+{"zones":["antibes","juan","golfe","cannes"],"prixMin":400000,"prixMax":500000,"pieces":[3,4],"surfaceMin":70,"surfaceMax":90,"exterieur":true,"ascenseur":true,"parking":true,"parkingOption":true,"lotsMin":10,"lotsMax":50,"lotsInconnusOk":true,"neuf":"les-deux","exclureBRS":true,"exclureViager":true,"reverifHeures":12,"notes":""}
+-->

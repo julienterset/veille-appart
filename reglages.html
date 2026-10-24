@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B6E8A">
+<title>Réglages · Notre futur chez-nous</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Riviera, version formulaire : bandeau mer, sections en cartes, barre d'enregistrement fixée en bas */
+:root{
+  --bg:#EEF4F6; --card:#FFFFFF; --ink:#0E2A3B; --muted:#4A6372; --line:#C9DCE2; --soft:#EEF4F6;
+  --sea:#0B6E8A; --head-sub:#E3F1F5; --head-meta:#CFE8EF;
+  --sun:#F2B33D; --sun-ink:#0E2A3B; --chip:#E2F0F3;
+  --warn:#FCECC8; --warn-ink:#6A4300; --ok:#DDF2E4; --ok-ink:#1E5B33; --err:#FBE0DC; --err-ink:#8A2216;
+  --shadow:0 1px 2px rgba(14,42,59,.08),0 8px 24px rgba(14,42,59,.06);
+  --display:"Bricolage Grotesque","Arial Narrow",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1A22; --card:#12252F; --ink:#E4EEF2; --muted:#9DB3BE; --line:#26414E; --soft:#0F2029;
+  --sea:#0B5F78; --head-sub:#D3E8EF; --head-meta:#A9D3E0; --chip:#173542;
+  --warn:#3D2E0E; --warn-ink:#F6CF7E; --ok:#143826; --ok-ink:#9FDCB3; --err:#45201B; --err-ink:#F5B4AA;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1A22; --card:#12252F; --ink:#E4EEF2; --muted:#9DB3BE; --line:#26414E; --soft:#0F2029;
+  --sea:#0B5F78; --head-sub:#D3E8EF; --head-meta:#A9D3E0; --chip:#173542;
+  --warn:#3D2E0E; --warn-ink:#F6CF7E; --ok:#143826; --ok-ink:#9FDCB3; --err:#45201B; --err-ink:#F5B4AA;
+  --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45}
+[hidden]{display:none!important}
+.gutter{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto}
+header.top{background:var(--sea);color:#FFFFFF;padding-top:env(safe-area-inset-top,0px)}
+header.top .wrap{padding-block:20px 22px;display:flex;flex-direction:column;gap:10px}
+.back{color:var(--head-meta);font-size:14px;font-weight:600;text-decoration:none;align-self:flex-start;padding:6px 0}
+.back:hover{color:#FFFFFF}
+h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(30px,6vw,40px);line-height:1;letter-spacing:-.01em}
+.lead{margin:0;color:var(--head-sub);max-width:60ch}
+.frieze{height:10px;background:repeating-linear-gradient(90deg,#FFFFFF 0 18px,var(--sun) 18px 36px)}
+main{display:flex;flex-direction:column;gap:14px;padding-block:18px 140px}
+.notice{border-radius:14px;padding:12px 14px;font-size:14px}
+.notice.warn{background:var(--warn);color:var(--warn-ink)}
+.notice.err{background:var(--err);color:var(--err-ink)}
+.notice.ok{background:var(--ok);color:var(--ok-ink)}
+section.card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px 18px;display:flex;flex-direction:column;gap:12px}
+h2{margin:0;font-family:var(--display);font-weight:800;font-size:20px}
+.hint{margin:0;font-size:13px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-weight:600;font-size:14px;cursor:pointer}
+.chip input:checked + span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip input:focus-visible + span{outline:3px solid var(--sun);outline-offset:2px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.field label{font-size:13px;color:var(--muted);font-weight:600}
+.inp{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;background:var(--soft);padding:0 12px;min-height:48px}
+.inp input,.inp select{flex:1;min-width:0;border:0;background:transparent;font:600 17px var(--body);color:var(--ink);padding:0;font-variant-numeric:tabular-nums}
+.inp input:focus,.inp select:focus{outline:none}
+.inp:focus-within{border-color:var(--sea);box-shadow:0 0 0 3px color-mix(in srgb,var(--sea) 25%,transparent)}
+.inp .u{color:var(--muted);font-size:14px;margin-left:6px}
+.toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:48px;cursor:pointer}
+.toggle .t{display:flex;flex-direction:column;gap:2px;min-width:0}
+.toggle .t b{font-weight:600}
+.toggle .t small{color:var(--muted);font-size:13px}
+.toggle input{appearance:none;-webkit-appearance:none;flex-shrink:0;width:52px;height:32px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;margin:0;transition:background .15s}
+.toggle input::after{content:"";position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
+.toggle input:checked{background:var(--sea)}
+.toggle input:checked::after{transform:translateX(20px)}
+.toggle input:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.toggle.sub{padding-left:16px;border-left:3px solid var(--chip)}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--soft);border-radius:12px;padding:4px;gap:4px}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:44px;border-radius:9px;font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;padding:0 6px}
+.seg input:checked + span{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.seg input:focus-visible + span{outline:3px solid var(--sun)}
+textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:12px;background:var(--soft);color:var(--ink);font:15px/1.45 var(--body);padding:10px 12px;resize:vertical}
+textarea:focus{outline:none;border-color:var(--sea)}
+.resume{display:flex;flex-wrap:wrap;gap:6px}
+.resume span{font-size:13px;font-weight:500;background:var(--chip);border-radius:8px;padding:5px 9px}
+details summary{cursor:pointer;font-weight:600;color:var(--sea);min-height:44px;display:flex;align-items:center}
+:root[data-theme="dark"] details summary{color:#8FD3E6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) details summary{color:#8FD3E6}}
+pre{margin:0;max-height:360px;overflow:auto;background:var(--soft);border-radius:12px;padding:12px;font-size:12px;white-space:pre-wrap;word-break:break-word}
+.btn{border:0;border-radius:12px;min-height:48px;padding:0 18px;font:700 15px var(--body);cursor:pointer}
+.btn.primary{background:var(--sea);color:#FFFFFF}
+.btn.primary:disabled{opacity:.45;cursor:default}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+a{color:var(--sea)}
+:root[data-theme="dark"] main a{color:#8FD3E6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) main a{color:#8FD3E6}}
+.savebar{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(14,42,59,.08);padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+.savebar .wrap{padding-block:10px;display:flex;align-items:center;gap:12px}
+.savebar .st{flex:1;min-width:0;font-size:13px;color:var(--muted)}
+.savebar .st b{color:var(--ink)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap gutter">
+    <a class="back" href="./">← Retour aux annonces</a>
+    <h1>Réglages de la veille</h1>
+    <p class="lead">Ce que vous enregistrez ici remplace les critères de la recherche. La veille les applique dès son prochain passage.</p>
+  </div>
+</header>
+<div class="frieze" aria-hidden="true"></div>
+
+<main class="wrap gutter">
+  <div class="notice" id="notice" hidden></div>
+
+  <section class="card" aria-labelledby="h-zone">
+    <h2 id="h-zone">Où</h2>
+    <p class="hint">Les communes et secteurs acceptés. Tout le reste est exclu.</p>
+    <div class="chips" id="zones"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-budget">
+    <h2 id="h-budget">Budget</h2>
+    <div class="pair">
+      <div class="field"><label for="prixMin">Prix minimum</label><div class="inp"><input id="prixMin" type="number" inputmode="numeric" step="5000" min="0"><span class="u">€</span></div></div>
+      <div class="field"><label for="prixMax">Prix maximum</label><div class="inp"><input id="prixMax" type="number" inputmode="numeric" step="5000" min="0"><span class="u">€</span></div></div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-logement">
+    <h2 id="h-logement">Logement</h2>
+    <div class="field"><span class="hint">Nombre de pièces</span>
+      <div class="chips" id="pieces">
+        <label class="chip"><input type="checkbox" id="p2" value="2"><span>2 pièces</span></label>
+        <label class="chip"><input type="checkbox" id="p3" value="3"><span>3 pièces</span></label>
+        <label class="chip"><input type="checkbox" id="p4" value="4"><span>4 pièces</span></label>
+        <label class="chip"><input type="checkbox" id="p5" value="5"><span>5 et plus</span></label>
+      </div>
+    </div>
+    <div class="pair">
+      <div class="field"><label for="surfaceMin">Surface minimum</label><div class="inp"><input id="surfaceMin" type="number" inputmode="numeric" step="1" min="0"><span class="u">m²</span></div></div>
+      <div class="field"><label for="surfaceMax">Surface maximum</label><div class="inp"><input id="surfaceMax" type="number" inputmode="numeric" step="1" min="0"><span class="u">m²</span></div></div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-equip">
+    <h2 id="h-equip">Indispensables</h2>
+    <label class="toggle"><span class="t"><b>Terrasse ou balcon</b><small>Sinon, simplement signalé s'il y en a un</small></span><input type="checkbox" role="switch" id="exterieur"></label>
+    <label class="toggle"><span class="t"><b>Ascenseur</b><small>Doit être écrit dans l'annonce</small></span><input type="checkbox" role="switch" id="ascenseur"></label>
+    <label class="toggle"><span class="t"><b>Parking privatif</b><small>Place, box ou garage inclus</small></span><input type="checkbox" role="switch" id="parking"></label>
+    <label class="toggle sub" id="parkingOptionRow"><span class="t"><b>Accepter un garage en option</b><small>Si le total reste dans le budget</small></span><input type="checkbox" role="switch" id="parkingOption"></label>
+  </section>
+
+  <section class="card" aria-labelledby="h-res">
+    <h2 id="h-res">Résidence</h2>
+    <div class="pair">
+      <div class="field"><label for="lotsMin">Lots minimum</label><div class="inp"><input id="lotsMin" type="number" inputmode="numeric" step="1" min="1"><span class="u">lots</span></div></div>
+      <div class="field"><label for="lotsMax">Lots maximum</label><div class="inp"><input id="lotsMax" type="number" inputmode="numeric" step="1" min="1"><span class="u">lots</span></div></div>
+    </div>
+    <label class="toggle"><span class="t"><b>Garder si le nombre de lots est inconnu</b><small>Avec l'étiquette « Nombre de lots à vérifier »</small></span><input type="checkbox" role="switch" id="lotsInconnusOk"></label>
+    <div class="field"><span class="hint">Ancien ou neuf</span>
+      <div class="seg" role="radiogroup" aria-label="Ancien ou neuf">
+        <label><input type="radio" name="neuf" id="n-both" value="les-deux"><span>Les deux</span></label>
+        <label><input type="radio" name="neuf" id="n-ancien" value="ancien"><span>Ancien</span></label>
+        <label><input type="radio" name="neuf" id="n-neuf" value="neuf"><span>Neuf</span></label>
+      </div>
+    </div>
+    <label class="toggle"><span class="t"><b>Exclure le bail réel solidaire</b><small>Accession aidée, sous plafonds de revenus</small></span><input type="checkbox" role="switch" id="exclureBRS"></label>
+    <label class="toggle"><span class="t"><b>Exclure le viager</b></span><input type="checkbox" role="switch" id="exclureViager"></label>
+  </section>
+
+  <section class="card" aria-labelledby="h-suivi">
+    <h2 id="h-suivi">Suivi des annonces</h2>
+    <div class="field"><label for="reverifHeures">Revérifier qu'un bien est toujours en vente</label>
+      <div class="inp"><select id="reverifHeures"><option value="6">Toutes les 6 heures</option><option value="12">Toutes les 12 heures</option><option value="24">Une fois par jour</option><option value="48">Tous les 2 jours</option></select></div>
+    </div>
+    <div class="field"><label for="notes">Règles complémentaires (texte libre)</label>
+      <textarea id="notes" placeholder="Ex. : éviter le rez-de-chaussée ; privilégier les derniers étages ; pas de bord de voie ferrée."></textarea>
+      <span class="hint">Écrites en français normal, la veille les applique telles quelles.</span>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-apercu">
+    <h2 id="h-apercu">Aperçu</h2>
+    <p class="hint">Le résumé affiché en haut de la page des annonces :</p>
+    <div class="resume" id="resume"></div>
+    <details><summary>Voir le fichier regles.md complet</summary><pre id="preview"></pre></details>
+  </section>
+
+  <section class="card" aria-labelledby="h-gh">
+    <h2 id="h-gh">Connexion GitHub</h2>
+    <div id="ghOff">
+      <p class="hint" style="margin-bottom:10px">Pour enregistrer, la page a besoin d'un jeton GitHub limité à ce dépôt. À faire une seule fois par appareil :</p>
+      <ol>
+        <li>Ouvrez <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a>.</li>
+        <li>Nom : « Veille appart ». Expiration : 1 an.</li>
+        <li>Repository access : <b>Only select repositories</b>, puis <b>veille-appart</b>.</li>
+        <li>Permissions › Repository permissions › <b>Contents</b> : <b>Read and write</b>.</li>
+        <li>Touchez <b>Generate token</b>, copiez-le et collez-le ci-dessous.</li>
+      </ol>
+      <div class="field" style="margin-top:12px"><label for="token">Jeton GitHub</label><div class="inp"><input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div></div>
+      <div class="row" style="margin-top:10px"><button type="button" class="btn ghost" id="saveToken">Mémoriser sur cet appareil</button></div>
+    </div>
+    <div id="ghOn" hidden>
+      <p class="hint">Jeton mémorisé sur cet appareil uniquement. Il ne donne accès qu'au dépôt veille-appart.</p>
+      <div class="row"><button type="button" class="btn ghost" id="forgetToken">Oublier le jeton</button></div>
+    </div>
+  </section>
+</main>
+
+<div class="savebar">
+  <div class="wrap gutter">
+    <span class="st" id="status" aria-live="polite">Chargement des règles…</span>
+    <button type="button" class="btn primary" id="save" disabled>Enregistrer</button>
+  </div>
+</div>
+
+<script src="generateur.js"></script>
+<script>
+const REPO = "julienterset/veille-appart", FILE = "regles.md";
+const API = "https://api.github.com/repos/" + REPO + "/contents/" + FILE;
+const $ = id => document.getElementById(id);
+const NUMS = ["prixMin","prixMax","surfaceMin","surfaceMax","lotsMin","lotsMax"];
+const BOOLS = ["exterieur","ascenseur","parking","parkingOption","lotsInconnusOk","exclureBRS","exclureViager"];
+let courant = "", sha = null, chargé = false;
+
+const store = {
+  get(k){ try { return localStorage.getItem(k) || ""; } catch(e){ return ""; } },
+  set(k,v){ try { v ? localStorage.setItem(k,v) : localStorage.removeItem(k); } catch(e){} }
+};
+const token = () => store.get("veille-gh-token");
+
+function notice(kind, text){
+  const n = $("notice");
+  if (!kind){ n.hidden = true; return; }
+  n.className = "notice " + kind; n.textContent = text; n.hidden = false;
+}
+function decode64(b){ const s = atob(b.replace(/\s/g,"")); const u = new Uint8Array(s.length); for (let i=0;i<s.length;i++) u[i]=s.charCodeAt(i); return new TextDecoder().decode(u); }
+function encode64(t){ const u = new TextEncoder().encode(t); let s = ""; for (let i=0;i<u.length;i++) s += String.fromCharCode(u[i]); return btoa(s); }
+
+function prochainPassage(){
+  const d = new Date(); const n = new Date(d);
+  n.setSeconds(0,0); n.setMinutes(56);
+  if (d.getMinutes() >= 56) n.setHours(n.getHours()+1);
+  if (n.getHours() < 6 || (n.getHours() === 6 && n.getMinutes() < 56)) n.setHours(6,56);
+  if (n.getHours() > 22){ n.setDate(n.getDate()+1); n.setHours(6,56); }
+  const j = n.toDateString() === d.toDateString() ? "" : "demain ";
+  return j + "à " + n.getHours() + " h 56";
+}
+
+// Construction des cases « Où »
+Regles.ZONES.forEach(z => {
+  const l = document.createElement("label"); l.className = "chip";
+  const i = document.createElement("input"); i.type = "checkbox"; i.id = "z-" + z.id; i.value = z.id;
+  const s = document.createElement("span"); s.textContent = z.label;
+  l.append(i, s); $("zones").append(l);
+});
+
+function remplir(r){
+  Regles.ZONES.forEach(z => $("z-" + z.id).checked = r.zones.includes(z.id));
+  NUMS.forEach(k => $(k).value = r[k] || "");
+  BOOLS.forEach(k => $(k).checked = !!r[k]);
+  [2,3,4,5].forEach(n => $("p" + n).checked = r.pieces.includes(n));
+  document.querySelector('input[name="neuf"][value="' + r.neuf + '"]').checked = true;
+  $("reverifHeures").value = String(r.reverifHeures);
+  $("notes").value = r.notes || "";
+}
+function lire(){
+  const r = {};
+  r.zones = Regles.ZONES.map(z => z.id).filter(id => $("z-" + id).checked);
+  NUMS.forEach(k => r[k] = $(k).value === "" ? 0 : Math.round(Number($(k).value)));
+  BOOLS.forEach(k => r[k] = $(k).checked);
+  r.pieces = [2,3,4,5].filter(n => $("p" + n).checked);
+  r.neuf = (document.querySelector('input[name="neuf"]:checked') || {}).value || "les-deux";
+  r.reverifHeures = Number($("reverifHeures").value);
+  r.notes = $("notes").value;
+  return r;
+}
+function erreurs(r){
+  const e = [];
+  if (!r.zones.length) e.push("choisissez au moins un secteur");
+  if (!r.pieces.length) e.push("choisissez au moins un nombre de pièces");
+  if (!r.prixMax) e.push("indiquez un prix maximum");
+  if (r.prixMin && r.prixMax && r.prixMin > r.prixMax) e.push("le prix minimum dépasse le maximum");
+  if (r.surfaceMin && r.surfaceMax && r.surfaceMin > r.surfaceMax) e.push("la surface minimum dépasse le maximum");
+  if (!r.lotsMin || !r.lotsMax || r.lotsMin > r.lotsMax) e.push("vérifiez le nombre de lots");
+  return e;
+}
+
+function maj(){
+  if (!chargé) return;
+  const r = lire();
+  $("parkingOptionRow").hidden = !r.parking;
+  const md = Regles.generer(r);
+  $("preview").textContent = md;
+  const res = /## Résumé affiché sur la page[\s\S]*?\n\n[^\n]*\n\n((?:- [^\n]*\n)+)/.exec(md);
+  $("resume").replaceChildren(...(res ? res[1].trim().split("\n").map(l => { const s = document.createElement("span"); s.textContent = l.slice(2); return s; }) : []));
+  const e = erreurs(r), change = md !== courant;
+  $("save").disabled = !change || e.length > 0;
+  $("status").replaceChildren();
+  if (e.length) $("status").textContent = "À corriger : " + e.join(", ") + ".";
+  else if (!change) $("status").textContent = "Aucune modification.";
+  else if (!token()) $("status").textContent = "Modifié. Connectez GitHub en bas de page pour enregistrer.";
+  else { const b = document.createElement("b"); b.textContent = "Modifications non enregistrées."; $("status").append(b); }
+}
+
+async function charger(){
+  try {
+    const h = { "Accept": "application/vnd.github+json" };
+    if (token()) h["Authorization"] = "Bearer " + token();
+    const r = await fetch(API + "?ref=main&t=" + Date.now(), { headers: h, cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json();
+    sha = j.sha; courant = decode64(j.content);
+    const lu = Regles.lireReglages(courant);
+    remplir(lu || Regles.DEFAUTS);
+    chargé = true;
+    if (!lu) notice("warn", "regles.md a été écrit à la main. Le formulaire part des derniers critères connus : vérifiez-les avant d'enregistrer, car l'enregistrement remplacera le fichier.");
+    else if (Regles.generer(lu) !== courant) notice("warn", "regles.md a été modifié à la main depuis le dernier enregistrement ici. Si vous enregistrez, ces modifications seront remplacées par ce formulaire (gardez-les dans « Règles complémentaires » si besoin).");
+    else notice(null);
+    maj();
+  } catch(e){
+    $("status").textContent = "Impossible de lire les règles.";
+    notice("err", "Les règles n'ont pas pu être chargées depuis GitHub. Vérifiez la connexion puis rechargez la page." + (String(e.message) === "401" ? " Le jeton mémorisé semble invalide ou expiré : oubliez-le et créez-en un nouveau." : ""));
+  }
+}
+
+async function enregistrer(){
+  if (!token()){ notice("warn", "Ajoutez d'abord un jeton GitHub (section Connexion GitHub, en bas)."); $("token").focus(); return; }
+  const md = Regles.generer(lire());
+  $("save").disabled = true; $("status").textContent = "Enregistrement…";
+  try {
+    const r = await fetch(API, { method: "PUT", headers: { "Accept": "application/vnd.github+json", "Authorization": "Bearer " + token(), "Content-Type": "application/json" },
+      body: JSON.stringify({ message: "Réglages : mise à jour des critères", content: encode64(md), sha, branch: "main" }) });
+    if (r.status === 409 || r.status === 422){ notice("err", "regles.md a changé entre-temps sur GitHub. Rechargez la page pour repartir de la dernière version."); $("status").textContent = "Non enregistré."; return; }
+    if (r.status === 401 || r.status === 403 || r.status === 404){ notice("err", "GitHub a refusé l'enregistrement. Le jeton est expiré ou n'a pas le droit « Contents : Read and write » sur veille-appart. Oubliez-le et créez-en un nouveau."); $("status").textContent = "Non enregistré."; return; }
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json();
+    sha = j.content.sha; courant = md;
+    notice("ok", "Enregistré. La veille appliquera ces critères à son prochain passage, " + prochainPassage() + ". Les annonces qui n'y correspondent plus seront retirées.");
+    maj();
+  } catch(e){
+    notice("err", "L'enregistrement a échoué (erreur réseau ou GitHub indisponible). Réessayez dans un instant.");
+    maj();
+  }
+}
+
+function majToken(){ $("ghOn").hidden = !token(); $("ghOff").hidden = !!token(); maj(); }
+$("saveToken").onclick = () => { const t = $("token").value.trim(); if (!t) return; store.set("veille-gh-token", t); $("token").value = ""; majToken(); notice(null); };
+$("forgetToken").onclick = () => { store.set("veille-gh-token", ""); majToken(); };
+$("save").onclick = enregistrer;
+document.querySelector("main").addEventListener("input", maj);
+document.querySelector("main").addEventListener("change", maj);
+window.addEventListener("beforeunload", e => { if (chargé && Regles.generer(lire()) !== courant) { e.preventDefault(); e.returnValue = ""; } });
+majToken();
+charger();
+</script>
+</body>
+</html>
