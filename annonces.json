@@ -10,7 +10,7 @@
     "Résidence de 10 à 50 lots",
     "Ancien ou neuf"
   ],
-  "derniere_verif": "2026-10-30T14:08:55+01:00",
+  "derniere_verif": "2026-10-30T15:03:14+01:00",
   "frequence": "vérification toutes les heures, de 7 h à 23 h",
   "annonces": [
     {
@@ -56,7 +56,7 @@
       "photo": "https://imagesv2.fnaim.fr/images1/img/69df8d1447143736e469c9c5.jpg",
       "lien_direct": true,
       "ajoutee_le": "2026-10-19T21:05:00+02:00",
-      "verifiee_le": "2026-10-29T20:09:26+01:00"
+      "verifiee_le": "2026-10-30T15:03:14+01:00"
     }
   ],
   "retirees": [
